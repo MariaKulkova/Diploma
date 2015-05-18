@@ -1,5 +1,19 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '7.0'
+# Global platform
+platform :ios, '8.0'
+
+###
+# Global pods
+###
+
+# Store "Home" screen contents in local DB
+pod 'MagicalRecord'
+
+# Other libraries
+pod 'ReactiveCocoa', '~> 2.4.4'
+
+###
+# Per target pods
+###
 
 target 'Diploma' do
 
