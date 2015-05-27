@@ -1,12 +1,10 @@
 //
 //  ViewController.m
-//  Diploma
-//
-//  Created by Maria on 18.05.15.
 //  Copyright (c) 2015 Maria. All rights reserved.
 //
 
 #import "ViewController.h"
+#import "CanvasView.h"
 
 @interface ViewController ()
 
@@ -16,7 +14,8 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	CanvasView *myView = [[CanvasView alloc] initWithFrame:self.view.bounds];
+	[self.view addSubview:myView];
 }
 
 - (void)didReceiveMemoryWarning {

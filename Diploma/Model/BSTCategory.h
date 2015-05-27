@@ -1,0 +1,30 @@
+//
+//  BSTCategory.h
+//  Diploma
+//
+//  Created by Maria on 24.05.15.
+//  Copyright (c) 2015 Maria. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+@class BSTAim, BSTUser;
+
+@interface BSTCategory : NSManagedObject
+
+@property (nonatomic)         int64_t *id;
+@property (nonatomic, retain) NSString *title;
+
+@property (nonatomic, retain) NSSet *aims;
+@property (nonatomic, retain) BSTUser *owner;
+@end
+
+@interface BSTCategory (CoreDataGeneratedAccessors)
+
+- (void)addAimsObject:(BSTAim *)value;
+- (void)removeAimsObject:(BSTAim *)value;
+- (void)addAims:(NSSet *)values;
+- (void)removeAims:(NSSet *)values;
+
+@end

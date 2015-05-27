@@ -7,14 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */; };
+		4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A521B11E33F001E7D45 /* BSTUser.m */; };
+		4CCE2A561B11E33F001E7D45 /* BSTStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A551B11E33F001E7D45 /* BSTStep.m */; };
+		4CCE2A591B11E33F001E7D45 /* BSTAim.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A581B11E33F001E7D45 /* BSTAim.m */; };
+		4CCE2A5C1B11E33F001E7D45 /* BSTPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A5B1B11E33F001E7D45 /* BSTPeriod.m */; };
+		4CCE2A5F1B11E33F001E7D45 /* BSTStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A5E1B11E33F001E7D45 /* BSTStatistics.m */; };
+		4CCE2A621B11E33F001E7D45 /* BSTAchievemnt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A611B11E33F001E7D45 /* BSTAchievemnt.m */; };
+		4CCE2A651B11E340001E7D45 /* BSTRewarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A641B11E340001E7D45 /* BSTRewarding.m */; };
+		4CCE2A681B11E340001E7D45 /* BSTReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A671B11E340001E7D45 /* BSTReminder.m */; };
+		4CCE2A6B1B11E340001E7D45 /* BSTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A6A1B11E340001E7D45 /* BSTCategory.m */; };
+		4CCE2A6F1B11E739001E7D45 /* MagicalRecord+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A6E1B11E739001E7D45 /* MagicalRecord+Additions.m */; };
+		4CCE2A781B1202CD001E7D45 /* BSTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A771B1202CD001E7D45 /* BSTRootTabBarController.m */; };
+		4CD8AEF91B130B6D0052BE82 /* BSTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AEF81B130B6D0052BE82 /* BSTBaseViewController.m */; };
+		4CD8AEFD1B13123F0052BE82 /* BSTAimsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AEFC1B13123F0052BE82 /* BSTAimsViewController.m */; };
 		4CD8B8351B09EC1700C31508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8341B09EC1700C31508 /* main.m */; };
 		4CD8B8381B09EC1700C31508 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8371B09EC1700C31508 /* AppDelegate.m */; };
-		4CD8B83B1B09EC1700C31508 /* Diploma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8391B09EC1700C31508 /* Diploma.xcdatamodeld */; };
+		4CD8B83B1B09EC1700C31508 /* BSTDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8391B09EC1700C31508 /* BSTDatabase.xcdatamodeld */; };
 		4CD8B83E1B09EC1700C31508 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B83D1B09EC1700C31508 /* ViewController.m */; };
 		4CD8B8411B09EC1700C31508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8B83F1B09EC1700C31508 /* Main.storyboard */; };
 		4CD8B8431B09EC1700C31508 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8B8421B09EC1700C31508 /* Images.xcassets */; };
 		4CD8B8461B09EC1700C31508 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8B8441B09EC1700C31508 /* LaunchScreen.xib */; };
 		4CD8B8521B09EC1700C31508 /* DiplomaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8511B09EC1700C31508 /* DiplomaTests.m */; };
+		4CD8B8641B0A1C9E00C31508 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8631B0A1C9E00C31508 /* CanvasView.m */; };
+		4CDE71EE1B1598A400823DA8 /* BSTAimCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE71ED1B1598A400823DA8 /* BSTAimCell.m */; };
+		4CDE71F11B15ACFD00823DA8 /* BSTViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE71F01B15ACFD00823DA8 /* BSTViewModel.m */; };
+		4CDE71F41B15AD5800823DA8 /* BSTAimViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE71F31B15AD5800823DA8 /* BSTAimViewModel.m */; };
+		4CDE71F71B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE71F61B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m */; };
+		4CDE71FA1B15B4B300823DA8 /* BSTCategoryNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE71F91B15B4B300823DA8 /* BSTCategoryNameCell.m */; };
+		4CDE71FD1B15D84C00823DA8 /* BSTSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE71FC1B15D84C00823DA8 /* BSTSegmentedControl.m */; };
+		4CDE72001B15FDCA00823DA8 /* BSTProgressPie.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE71FF1B15FDCA00823DA8 /* BSTProgressPie.m */; };
+		4CDE72031B1606B900823DA8 /* BSTSpline.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE72021B1606B900823DA8 /* BSTSpline.m */; };
 		BB09F980E1C01B83D69510C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E60ECAF24FA952DAD5E4B1A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,20 +54,70 @@
 /* Begin PBXFileReference section */
 		027FDBF632066E681DE1F75D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2E60ECAF24FA952DAD5E4B1A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCE2A4E1B11E33E001E7D45 /* BSTPeriodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTPeriodType.h; sourceTree = "<group>"; };
+		4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTPeriodType.m; sourceTree = "<group>"; };
+		4CCE2A511B11E33F001E7D45 /* BSTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTUser.h; sourceTree = "<group>"; };
+		4CCE2A521B11E33F001E7D45 /* BSTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTUser.m; sourceTree = "<group>"; };
+		4CCE2A541B11E33F001E7D45 /* BSTStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStep.h; sourceTree = "<group>"; };
+		4CCE2A551B11E33F001E7D45 /* BSTStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTStep.m; sourceTree = "<group>"; };
+		4CCE2A571B11E33F001E7D45 /* BSTAim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAim.h; sourceTree = "<group>"; };
+		4CCE2A581B11E33F001E7D45 /* BSTAim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAim.m; sourceTree = "<group>"; };
+		4CCE2A5A1B11E33F001E7D45 /* BSTPeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTPeriod.h; sourceTree = "<group>"; };
+		4CCE2A5B1B11E33F001E7D45 /* BSTPeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTPeriod.m; sourceTree = "<group>"; };
+		4CCE2A5D1B11E33F001E7D45 /* BSTStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStatistics.h; sourceTree = "<group>"; };
+		4CCE2A5E1B11E33F001E7D45 /* BSTStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTStatistics.m; sourceTree = "<group>"; };
+		4CCE2A601B11E33F001E7D45 /* BSTAchievemnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAchievemnt.h; sourceTree = "<group>"; };
+		4CCE2A611B11E33F001E7D45 /* BSTAchievemnt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAchievemnt.m; sourceTree = "<group>"; };
+		4CCE2A631B11E340001E7D45 /* BSTRewarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTRewarding.h; sourceTree = "<group>"; };
+		4CCE2A641B11E340001E7D45 /* BSTRewarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTRewarding.m; sourceTree = "<group>"; };
+		4CCE2A661B11E340001E7D45 /* BSTReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTReminder.h; sourceTree = "<group>"; };
+		4CCE2A671B11E340001E7D45 /* BSTReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTReminder.m; sourceTree = "<group>"; };
+		4CCE2A691B11E340001E7D45 /* BSTCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTCategory.h; sourceTree = "<group>"; };
+		4CCE2A6A1B11E340001E7D45 /* BSTCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTCategory.m; sourceTree = "<group>"; };
+		4CCE2A6D1B11E739001E7D45 /* MagicalRecord+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MagicalRecord+Additions.h"; sourceTree = "<group>"; };
+		4CCE2A6E1B11E739001E7D45 /* MagicalRecord+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MagicalRecord+Additions.m"; sourceTree = "<group>"; };
+		4CCE2A721B11E99E001E7D45 /* nsuserdefaults-helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nsuserdefaults-helper.h"; sourceTree = "<group>"; };
+		4CCE2A731B11E99E001E7D45 /* nsuserdefaults-macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nsuserdefaults-macros.h"; sourceTree = "<group>"; };
+		4CCE2A741B11EA60001E7D45 /* Macroses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macroses.h; sourceTree = "<group>"; };
+		4CCE2A751B11FF5F001E7D45 /* BSTSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSTSettings.h; sourceTree = "<group>"; };
+		4CCE2A761B1202CD001E7D45 /* BSTRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTRootTabBarController.h; sourceTree = "<group>"; };
+		4CCE2A771B1202CD001E7D45 /* BSTRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTRootTabBarController.m; sourceTree = "<group>"; };
+		4CD8AEF71B130B6D0052BE82 /* BSTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTBaseViewController.h; sourceTree = "<group>"; };
+		4CD8AEF81B130B6D0052BE82 /* BSTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTBaseViewController.m; sourceTree = "<group>"; };
+		4CD8AEFB1B13123F0052BE82 /* BSTAimsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAimsViewController.h; sourceTree = "<group>"; };
+		4CD8AEFC1B13123F0052BE82 /* BSTAimsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAimsViewController.m; sourceTree = "<group>"; };
 		4CD8B82F1B09EC1700C31508 /* Diploma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diploma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD8B8331B09EC1700C31508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD8B8341B09EC1700C31508 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CD8B8361B09EC1700C31508 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CD8B8371B09EC1700C31508 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4CD8B83A1B09EC1700C31508 /* Diploma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diploma.xcdatamodel; sourceTree = "<group>"; };
-		4CD8B83C1B09EC1700C31508 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4CD8B83D1B09EC1700C31508 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4CD8B83A1B09EC1700C31508 /* BSTDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BSTDatabase.xcdatamodel; sourceTree = "<group>"; };
+		4CD8B83C1B09EC1700C31508 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Diploma/ViewController.h; sourceTree = SOURCE_ROOT; };
+		4CD8B83D1B09EC1700C31508 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Diploma/ViewController.m; sourceTree = SOURCE_ROOT; };
 		4CD8B8401B09EC1700C31508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CD8B8421B09EC1700C31508 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4CD8B8451B09EC1700C31508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4CD8B84B1B09EC1700C31508 /* DiplomaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiplomaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD8B8501B09EC1700C31508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD8B8511B09EC1700C31508 /* DiplomaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiplomaTests.m; sourceTree = "<group>"; };
+		4CD8B8621B0A1C9E00C31508 /* CanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		4CD8B8631B0A1C9E00C31508 /* CanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		4CDE71EC1B1598A400823DA8 /* BSTAimCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAimCell.h; sourceTree = "<group>"; };
+		4CDE71ED1B1598A400823DA8 /* BSTAimCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAimCell.m; sourceTree = "<group>"; };
+		4CDE71EF1B15ACFD00823DA8 /* BSTViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTViewModel.h; sourceTree = "<group>"; };
+		4CDE71F01B15ACFD00823DA8 /* BSTViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTViewModel.m; sourceTree = "<group>"; };
+		4CDE71F21B15AD5800823DA8 /* BSTAimViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAimViewModel.h; sourceTree = "<group>"; };
+		4CDE71F31B15AD5800823DA8 /* BSTAimViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAimViewModel.m; sourceTree = "<group>"; };
+		4CDE71F51B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTCollectionViewCategoriesLayout.h; sourceTree = "<group>"; };
+		4CDE71F61B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTCollectionViewCategoriesLayout.m; sourceTree = "<group>"; };
+		4CDE71F81B15B4B300823DA8 /* BSTCategoryNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTCategoryNameCell.h; sourceTree = "<group>"; };
+		4CDE71F91B15B4B300823DA8 /* BSTCategoryNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTCategoryNameCell.m; sourceTree = "<group>"; };
+		4CDE71FB1B15D84C00823DA8 /* BSTSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTSegmentedControl.h; sourceTree = "<group>"; };
+		4CDE71FC1B15D84C00823DA8 /* BSTSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTSegmentedControl.m; sourceTree = "<group>"; };
+		4CDE71FE1B15FDCA00823DA8 /* BSTProgressPie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTProgressPie.h; sourceTree = "<group>"; };
+		4CDE71FF1B15FDCA00823DA8 /* BSTProgressPie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTProgressPie.m; sourceTree = "<group>"; };
+		4CDE72011B1606B900823DA8 /* BSTSpline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTSpline.h; sourceTree = "<group>"; };
+		4CDE72021B1606B900823DA8 /* BSTSpline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTSpline.m; sourceTree = "<group>"; };
 		79DFD997DDB059383F562607 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +149,62 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4CCE2A6C1B11E6A0001E7D45 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4CCE2A6D1B11E739001E7D45 /* MagicalRecord+Additions.h */,
+				4CCE2A6E1B11E739001E7D45 /* MagicalRecord+Additions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		4CCE2A701B11E94C001E7D45 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				4CCE2A721B11E99E001E7D45 /* nsuserdefaults-helper.h */,
+				4CCE2A731B11E99E001E7D45 /* nsuserdefaults-macros.h */,
+				4CCE2A751B11FF5F001E7D45 /* BSTSettings.h */,
+			);
+			name = UserDefaults;
+			sourceTree = "<group>";
+		};
+		4CCE2A711B11E963001E7D45 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				4CCE2A691B11E340001E7D45 /* BSTCategory.h */,
+				4CCE2A6A1B11E340001E7D45 /* BSTCategory.m */,
+				4CCE2A661B11E340001E7D45 /* BSTReminder.h */,
+				4CCE2A671B11E340001E7D45 /* BSTReminder.m */,
+				4CCE2A631B11E340001E7D45 /* BSTRewarding.h */,
+				4CCE2A641B11E340001E7D45 /* BSTRewarding.m */,
+				4CCE2A601B11E33F001E7D45 /* BSTAchievemnt.h */,
+				4CCE2A611B11E33F001E7D45 /* BSTAchievemnt.m */,
+				4CCE2A5D1B11E33F001E7D45 /* BSTStatistics.h */,
+				4CCE2A5E1B11E33F001E7D45 /* BSTStatistics.m */,
+				4CCE2A5A1B11E33F001E7D45 /* BSTPeriod.h */,
+				4CCE2A5B1B11E33F001E7D45 /* BSTPeriod.m */,
+				4CCE2A571B11E33F001E7D45 /* BSTAim.h */,
+				4CCE2A581B11E33F001E7D45 /* BSTAim.m */,
+				4CCE2A541B11E33F001E7D45 /* BSTStep.h */,
+				4CCE2A551B11E33F001E7D45 /* BSTStep.m */,
+				4CCE2A511B11E33F001E7D45 /* BSTUser.h */,
+				4CCE2A521B11E33F001E7D45 /* BSTUser.m */,
+				4CCE2A4E1B11E33E001E7D45 /* BSTPeriodType.h */,
+				4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */,
+				4CD8B8391B09EC1700C31508 /* BSTDatabase.xcdatamodeld */,
+			);
+			name = DataBase;
+			sourceTree = "<group>";
+		};
+		4CD8AEFA1B130B740052BE82 /* BaseViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CD8AEF71B130B6D0052BE82 /* BSTBaseViewController.h */,
+				4CD8AEF81B130B6D0052BE82 /* BSTBaseViewController.m */,
+			);
+			name = BaseViewControllers;
+			sourceTree = "<group>";
+		};
 		4CD8B8261B09EC1700C31508 = {
 			isa = PBXGroup;
 			children = (
@@ -99,14 +228,12 @@
 		4CD8B8311B09EC1700C31508 /* Diploma */ = {
 			isa = PBXGroup;
 			children = (
-				4CD8B8361B09EC1700C31508 /* AppDelegate.h */,
-				4CD8B8371B09EC1700C31508 /* AppDelegate.m */,
-				4CD8B83C1B09EC1700C31508 /* ViewController.h */,
-				4CD8B83D1B09EC1700C31508 /* ViewController.m */,
-				4CD8B83F1B09EC1700C31508 /* Main.storyboard */,
+				4CCE2A6C1B11E6A0001E7D45 /* Categories */,
+				4CD8B85E1B0A05A300C31508 /* AppDelegate */,
+				4CD8B85F1B0A06CD00C31508 /* Model */,
+				4CD8B8601B0A06E100C31508 /* View */,
+				4CD8B8611B0A06F600C31508 /* ViewModel */,
 				4CD8B8421B09EC1700C31508 /* Images.xcassets */,
-				4CD8B8441B09EC1700C31508 /* LaunchScreen.xib */,
-				4CD8B8391B09EC1700C31508 /* Diploma.xcdatamodeld */,
 				4CD8B8321B09EC1700C31508 /* Supporting Files */,
 			);
 			path = Diploma;
@@ -136,6 +263,74 @@
 				4CD8B8501B09EC1700C31508 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CD8B85E1B0A05A300C31508 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4CD8B8361B09EC1700C31508 /* AppDelegate.h */,
+				4CD8B8371B09EC1700C31508 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4CD8B85F1B0A06CD00C31508 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CCE2A711B11E963001E7D45 /* DataBase */,
+				4CCE2A701B11E94C001E7D45 /* UserDefaults */,
+				4CCE2A741B11EA60001E7D45 /* Macroses.h */,
+				4CDE72011B1606B900823DA8 /* BSTSpline.h */,
+				4CDE72021B1606B900823DA8 /* BSTSpline.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CD8B8601B0A06E100C31508 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CDE71EB1B15985600823DA8 /* InheritedViews */,
+				4CD8AEFA1B130B740052BE82 /* BaseViewControllers */,
+				4CD8B8441B09EC1700C31508 /* LaunchScreen.xib */,
+				4CD8B83F1B09EC1700C31508 /* Main.storyboard */,
+				4CD8B83C1B09EC1700C31508 /* ViewController.h */,
+				4CD8B83D1B09EC1700C31508 /* ViewController.m */,
+				4CD8B8621B0A1C9E00C31508 /* CanvasView.h */,
+				4CD8B8631B0A1C9E00C31508 /* CanvasView.m */,
+				4CCE2A761B1202CD001E7D45 /* BSTRootTabBarController.h */,
+				4CCE2A771B1202CD001E7D45 /* BSTRootTabBarController.m */,
+				4CD8AEFB1B13123F0052BE82 /* BSTAimsViewController.h */,
+				4CD8AEFC1B13123F0052BE82 /* BSTAimsViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CD8B8611B0A06F600C31508 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CDE71EF1B15ACFD00823DA8 /* BSTViewModel.h */,
+				4CDE71F01B15ACFD00823DA8 /* BSTViewModel.m */,
+				4CDE71F21B15AD5800823DA8 /* BSTAimViewModel.h */,
+				4CDE71F31B15AD5800823DA8 /* BSTAimViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4CDE71EB1B15985600823DA8 /* InheritedViews */ = {
+			isa = PBXGroup;
+			children = (
+				4CDE71EC1B1598A400823DA8 /* BSTAimCell.h */,
+				4CDE71ED1B1598A400823DA8 /* BSTAimCell.m */,
+				4CDE71F51B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.h */,
+				4CDE71F61B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m */,
+				4CDE71F81B15B4B300823DA8 /* BSTCategoryNameCell.h */,
+				4CDE71F91B15B4B300823DA8 /* BSTCategoryNameCell.m */,
+				4CDE71FB1B15D84C00823DA8 /* BSTSegmentedControl.h */,
+				4CDE71FC1B15D84C00823DA8 /* BSTSegmentedControl.m */,
+				4CDE71FE1B15FDCA00823DA8 /* BSTProgressPie.h */,
+				4CDE71FF1B15FDCA00823DA8 /* BSTProgressPie.m */,
+			);
+			name = InheritedViews;
 			sourceTree = "<group>";
 		};
 		576BB08AAEC19947A77AC4A7 /* Frameworks */ = {
@@ -281,10 +476,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CCE2A781B1202CD001E7D45 /* BSTRootTabBarController.m in Sources */,
+				4CCE2A5F1B11E33F001E7D45 /* BSTStatistics.m in Sources */,
+				4CDE71FD1B15D84C00823DA8 /* BSTSegmentedControl.m in Sources */,
+				4CDE71F71B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m in Sources */,
+				4CDE71F11B15ACFD00823DA8 /* BSTViewModel.m in Sources */,
+				4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */,
+				4CDE71F41B15AD5800823DA8 /* BSTAimViewModel.m in Sources */,
+				4CCE2A591B11E33F001E7D45 /* BSTAim.m in Sources */,
+				4CCE2A621B11E33F001E7D45 /* BSTAchievemnt.m in Sources */,
+				4CCE2A561B11E33F001E7D45 /* BSTStep.m in Sources */,
+				4CD8AEFD1B13123F0052BE82 /* BSTAimsViewController.m in Sources */,
 				4CD8B8381B09EC1700C31508 /* AppDelegate.m in Sources */,
+				4CD8AEF91B130B6D0052BE82 /* BSTBaseViewController.m in Sources */,
+				4CCE2A5C1B11E33F001E7D45 /* BSTPeriod.m in Sources */,
+				4CDE72001B15FDCA00823DA8 /* BSTProgressPie.m in Sources */,
+				4CCE2A651B11E340001E7D45 /* BSTRewarding.m in Sources */,
 				4CD8B8351B09EC1700C31508 /* main.m in Sources */,
+				4CCE2A681B11E340001E7D45 /* BSTReminder.m in Sources */,
+				4CDE71FA1B15B4B300823DA8 /* BSTCategoryNameCell.m in Sources */,
 				4CD8B83E1B09EC1700C31508 /* ViewController.m in Sources */,
-				4CD8B83B1B09EC1700C31508 /* Diploma.xcdatamodeld in Sources */,
+				4CCE2A6F1B11E739001E7D45 /* MagicalRecord+Additions.m in Sources */,
+				4CDE71EE1B1598A400823DA8 /* BSTAimCell.m in Sources */,
+				4CD8B83B1B09EC1700C31508 /* BSTDatabase.xcdatamodeld in Sources */,
+				4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */,
+				4CCE2A6B1B11E340001E7D45 /* BSTCategory.m in Sources */,
+				4CD8B8641B0A1C9E00C31508 /* CanvasView.m in Sources */,
+				4CDE72031B1606B900823DA8 /* BSTSpline.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +531,7 @@
 				4CD8B8401B09EC1700C31508 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		4CD8B8441B09EC1700C31508 /* LaunchScreen.xib */ = {
@@ -321,6 +540,7 @@
 				4CD8B8451B09EC1700C31508 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -497,13 +717,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4CD8B8391B09EC1700C31508 /* Diploma.xcdatamodeld */ = {
+		4CD8B8391B09EC1700C31508 /* BSTDatabase.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4CD8B83A1B09EC1700C31508 /* Diploma.xcdatamodel */,
+				4CD8B83A1B09EC1700C31508 /* BSTDatabase.xcdatamodel */,
 			);
-			currentVersion = 4CD8B83A1B09EC1700C31508 /* Diploma.xcdatamodel */;
-			path = Diploma.xcdatamodeld;
+			currentVersion = 4CD8B83A1B09EC1700C31508 /* BSTDatabase.xcdatamodel */;
+			name = BSTDatabase.xcdatamodeld;
+			path = ../BSTDatabase.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

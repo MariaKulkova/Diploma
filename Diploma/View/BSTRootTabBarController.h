@@ -1,12 +1,10 @@
 //
-//  ViewController.h
+//  BSTRootTabBarController.h
 //  Copyright (c) 2015 Maria. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BSTRootTabBarController : UITabBarController
 
 @end
-
