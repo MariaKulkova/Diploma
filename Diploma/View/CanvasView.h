@@ -7,4 +7,7 @@
 
 @interface CanvasView : UIView
 
+@property (nonatomic, assign) NSInteger commonAimsCount;
+@property (nonatomic, assign) NSInteger achievedAimsCount;
+
 @end

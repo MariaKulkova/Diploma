@@ -14,8 +14,8 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	CanvasView *myView = [[CanvasView alloc] initWithFrame:self.view.bounds];
-	[self.view addSubview:myView];
+//	CanvasView *myView = [[CanvasView alloc] initWithFrame:self.view.bounds];
+//	[self.view addSubview:myView];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -19,8 +19,15 @@
 		CGPoint currentPoint  = [functionPoints[i] CGPointValue];
 		CGPoint nextPoint     = [functionPoints[i+1] CGPointValue];
 		
-		CGFloat derivativeValue = 0.5 * ((currentPoint.y - previousPoint.y) / (currentPoint.x - previousPoint.x) +
-								 (nextPoint.y - currentPoint.y) / (nextPoint.x - currentPoint.x));
+		CGFloat derivativeValue;
+		if (((previousPoint.x > currentPoint.x) && (nextPoint.x > currentPoint.x)) ||
+			((previousPoint.x < currentPoint.x) && (nextPoint.x < currentPoint.x))) {
+			derivativeValue = 0.5 * ((currentPoint.y - previousPoint.y) / (currentPoint.x - previousPoint.x) +
+											 (nextPoint.y - currentPoint.y) / (nextPoint.x - currentPoint.x));
+		}
+		else {
+			derivativeValue = 0;
+		}
 
 		[functionDerivatives addObject:[NSNumber numberWithFloat:derivativeValue]];
 	}
