@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="55u-Pf-MlS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Item-->
@@ -34,7 +35,39 @@
                     <view key="view" contentMode="scaleToFill" id="ygb-fk-l3P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofh-ER-sgc" customClass="CanvasView">
+                                <rect key="frame" x="60" y="138" width="200" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ofh-ER-sgc" secondAttribute="height" multiplier="10:13" id="dJy-oe-iS6"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainStation" translatesAutoresizingMaskIntoConstraints="NO" id="uYB-GY-oyD">
+                                <rect key="frame" x="246" y="125" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="gEp-J7-zXD"/>
+                                    <constraint firstAttribute="width" constant="28" id="mtY-NV-nGJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainStation" translatesAutoresizingMaskIntoConstraints="NO" id="im9-c9-a4W">
+                                <rect key="frame" x="46" y="383" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="9Vm-Kx-s0O"/>
+                                    <constraint firstAttribute="width" constant="28" id="h7Q-Pq-JT3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Ofh-ER-sgc" secondAttribute="centerY" constant="16" id="8gX-bX-Lrp"/>
+                            <constraint firstItem="Ofh-ER-sgc" firstAttribute="leading" secondItem="im9-c9-a4W" secondAttribute="trailing" constant="-14" id="DKf-K3-MSK"/>
+                            <constraint firstItem="uYB-GY-oyD" firstAttribute="leading" secondItem="Ofh-ER-sgc" secondAttribute="trailing" constant="-14" id="KfW-29-VYW"/>
+                            <constraint firstItem="Ofh-ER-sgc" firstAttribute="top" secondItem="uYB-GY-oyD" secondAttribute="bottom" constant="-15" id="Ubn-4A-NEV"/>
+                            <constraint firstItem="im9-c9-a4W" firstAttribute="top" secondItem="Ofh-ER-sgc" secondAttribute="bottom" constant="-15" id="YRl-YG-Qe7"/>
+                            <constraint firstItem="Ofh-ER-sgc" firstAttribute="leading" secondItem="ygb-fk-l3P" secondAttribute="leading" constant="60" id="ZSV-Ud-GGw"/>
+                            <constraint firstAttribute="trailing" secondItem="Ofh-ER-sgc" secondAttribute="trailing" constant="60" id="hCW-0k-eEM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="spU-QM-M9a"/>
                 </viewController>
@@ -356,6 +389,9 @@
             <point key="canvasLocation" x="-48" y="285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MainStation" width="15" height="15"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

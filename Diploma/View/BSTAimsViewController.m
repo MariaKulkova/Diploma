@@ -44,6 +44,7 @@
 	self.tableView.dataSource = nil;
 }
 
+// Temporary
 -(void)setupDataForCollectionView {
 	
 	// Create the original set of data
@@ -96,6 +97,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
 		//add code here for when you hit delete
+		// TODO: delete cell
 	}
 }
 
@@ -132,53 +134,11 @@
 	
 	BSTCategoryNameCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseId forIndexPath:indexPath];
 	cell.label.text = @"Item";
-	//id dbEntity   = [self sectionAtIndexPath:indexPath];
-	//cell.dbEntity = dbEntity;
-	//cell.active   = [self.viewModel.selectedCategory isEqual:dbEntity];
 	
 	return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-	[collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
-	
-	id section    = [self sectionAtIndexPath:indexPath];
-	id oldSection = self.viewModel.selectedCategory;
-	
-	if (oldSection != section) {
-		[self selectSection:section afterSection:oldSection];
-		self.viewModel.selectedCategory = section;
-	}
 }
-
-#pragma mark - Private
-
-- (id)sectionAtIndexPath:(NSIndexPath *)indexPath {
-	NSUInteger index = indexPath.row % self.viewModel.categories.count;
-	return self.viewModel.categories[index];
-}
-
-- (void)selectSection:(id)section afterSection:(id)oldSection {
-	if (oldSection) {
-		[self setSelected:NO forSectionAtIndex:[self.viewModel.categories indexOfObject:oldSection]];
-	}
-	if (section) {
-		[self setSelected:YES forSectionAtIndex:[self.viewModel.categories indexOfObject:section]];
-	}
-}
-
-- (void)setSelected:(BOOL)selected forSectionAtIndex:(NSUInteger)index {
-	NSUInteger const count = self.viewModel.categories.count;
-	NSArray *const visible = [self.catalogsCollectionView indexPathsForVisibleItems];
-	
-	for (NSUInteger page = 0; page < 3; ++page) {
-		NSIndexPath *indexPath = [NSIndexPath indexPathForItem:(count * page + index) inSection:0];
-		if ([visible containsObject:indexPath]) {
-			BSTCategoryNameCell *cell = (BSTCategoryNameCell *)[self.catalogsCollectionView cellForItemAtIndexPath:indexPath];
-			//cell.active = selected;
-		}
-	}
-}
-
 
 @end

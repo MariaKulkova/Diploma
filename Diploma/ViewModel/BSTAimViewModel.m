@@ -40,7 +40,6 @@ static __weak BSTAimViewModel *instance;
 
 - (void)initialize {
 	[super initialize];
-	_categories = [NSMutableArray arrayWithObjects:@"Work", @"Personal", "Skills", @"Dreams", nil];
 }
 
 @end
