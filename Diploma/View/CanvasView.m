@@ -85,7 +85,7 @@
 	
 	srand48(time(0));
 	NSMutableArray *points = [[NSMutableArray alloc] init];
-	for (CGFloat y = 0; y <= rect.size.height ; y += rect.size.height / 10) {
+	for (CGFloat y = 0; y <= rect.size.height ; y += rect.size.height / 5) {
 		CGFloat x = (y - m) / k;
 		if (y != 0 && (y + rect.size.height / 10 < rect.size.height)) {
 			x += drand48() * rect.size.width - x;

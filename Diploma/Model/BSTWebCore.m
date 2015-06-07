@@ -10,8 +10,8 @@
 
 static NSString * const kSDFParseAPIBaseURLString = @"https://api.parse.com/1/";
 
-static NSString * const kSDFParseAPIApplicationId = @"YOUR_APPLICATION_ID";
-static NSString * const kSDFParseAPIKey = @"YOUR_REST_API_KEY";
+static NSString * const kSDFParseAPIApplicationId = @"zaJZnPE05UW9i7Hjrle338S0geAG30m4Cj3thWhU";
+static NSString * const kSDFParseAPIKey = @"1CQKgBONmElYOV1AsS2BxONFqN9MzFurl2J4CbyD";
 
 @interface BSTWebCore ()
 
@@ -50,6 +50,14 @@ static NSString * const kSDFParseAPIKey = @"YOUR_REST_API_KEY";
 
 + (NSURLSession *)sharedSession {
 	return [[self sharedInstance] sharedSession];
+}
+
+- (NSURLSession *)sharedSession {
+	if (!_parseSession) {
+		NSURLSessionConfiguration *configuration = [self defaultConfiguration];
+		_parseSession = [NSURLSession sessionWithConfiguration:configuration];
+	}
+	return _parseSession;
 }
 
 

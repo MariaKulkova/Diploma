@@ -8,15 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BSTManagedObject.h"
 
 @class BSTAim, BSTUser;
 
-@interface BSTCategory : NSManagedObject
+@interface BSTCategory : BSTManagedObject
 
-@property (nonatomic)         int64_t *id;
+@property (nonatomic)         int64_t  id;
 @property (nonatomic, retain) NSString *title;
 
-@property (nonatomic, retain) NSSet *aims;
+@property (nonatomic, retain) NSSet   *aims;
 @property (nonatomic, retain) BSTUser *owner;
 @end
 

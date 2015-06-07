@@ -8,6 +8,8 @@
 
 #import "BSTAim.h"
 #import "BSTStep.h"
+#import "BSTCategory.h"
+#import "MagicalRecord+Additions.h"
 
 
 @implementation BSTAim
@@ -23,7 +25,10 @@
 
 @implementation BSTAim (Fill)
 
-- (void)fillWithUserData:(NSDictionary *)info {
+- (void)fillWithUserInfo:(NSDictionary *)info {
+	self.title = info[@"title"];
+
+	//self.category = ;
 }
 
 @end

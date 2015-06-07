@@ -8,16 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BSTManagedObject.h"
 
 @class BSTStep, BSTCategory, BSTStatistics;
 
-@interface BSTAim : NSManagedObject
+@interface BSTAim : BSTManagedObject
 
 @property (nonatomic)         int64_t     id;
 @property (nonatomic, retain) NSString    *title;
 @property (nonatomic)         BOOL        *completed;
 
-@property (nonatomic, retain) BSTCategory *category;
+@property (nonatomic)         BSTCategory *category;
 @property (nonatomic, retain) NSSet       *steps;
 @property (nonatomic, retain) NSSet       *timeStatistics;
 @end

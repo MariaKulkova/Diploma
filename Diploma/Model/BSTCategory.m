@@ -22,7 +22,20 @@
 
 @implementation BSTCategory (Fill)
 
-- (void)fillWithUserData:(NSDictionary *)info {
+- (void)fillWithUserInfo:(NSDictionary *)info {
+	self.id = [info[@"id"] longLongValue];
+	self.title = info[@"title"];
+	self.aims  = info[@"aims"];
+}
+
+- (NSDictionary *)representInfo {
+	NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+	[dictionary setValue:self.objectID forKey:@"id"];
+	[dictionary setValue:self.title forKey:@"title"];
+	[dictionary setValue:self.aims forKey:@"aims"];
+	[dictionary setValue:self.owner.objectID forKey:@"owner_id"];
+
+	return dictionary;
 }
 
 @end

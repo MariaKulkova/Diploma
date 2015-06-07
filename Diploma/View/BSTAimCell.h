@@ -4,7 +4,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSTAim.h"
 
 @interface BSTAimCell : UITableViewCell
+
+@property (nonatomic, strong) BSTAim *dbEntity;
 
 @end

@@ -17,6 +17,6 @@
 
 + (instancetype)sharedInstance;
 
-+ (NSURLSession *)sharedSession;
++ (NSURLSession *)parseSession;
 
 @end

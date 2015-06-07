@@ -23,7 +23,9 @@
 
 @property (nonatomic, strong) BSTAimViewModel *viewModel;
 
-@property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, strong) NSArray *items;
+
+@property (nonatomic) int number;
 
 @end
 
@@ -32,8 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.infiniteScrollActive = YES;
-	[self setupDataForCollectionView];
-	
+	self.number = 1;
 	[self bindModel];
 }
 
@@ -44,46 +45,43 @@
 	self.tableView.dataSource = nil;
 }
 
-// Temporary
--(void)setupDataForCollectionView {
-	
-	// Create the original set of data
-	NSArray *originalArray = @[@"itemOne", @"itemTwo", @"itemThree"];
-	
-	// Grab references to the first and last items
-	// They're typed as id so you don't need to worry about what kind
-	// of objects the originalArray is holding
-	id firstItem = originalArray[0];
-	id lastItem = [originalArray lastObject];
-	
-	NSMutableArray *workingArray = [originalArray mutableCopy];
-	
-	// Add the copy of the last item to the beginning
-	[workingArray insertObject:lastItem atIndex:0];
-	
-	// Add the copy of the first item to the end
-	[workingArray addObject:firstItem];
-	
-	// Update the collection view's data source property
-	self.dataArray = [NSArray arrayWithArray:workingArray];
+- (RACSignal *)itemsObserver {
+	return RACObserve(self.viewModel, aims);
 }
 
 #pragma mark - <UIScrollViewDelegate>
 
 
 - (void)bindModel{
+	self.viewModel = [BSTAimViewModel new];
+	@weakify(self);
+	
+	[[[self.itemsObserver replayLast] deliverOnMainThread] subscribeNext:^(NSArray *items) {
+		@strongify(self);
+		self.items = items;
+		[self.tableView reloadData];
+	}];
+}
+- (IBAction)addEntity:(id)sender {
+	srand48(time(0));
+	NSMutableDictionary *aimInfo = [[NSMutableDictionary alloc] init];
+	[aimInfo setValue:@"test" forKey:@"title"];
+	[aimInfo setValue:@"All" forKey:@"category"];
+	[self.viewModel addAim:aimInfo intoCategory:[NSNumber numberWithInt:self.number]];
+	self.number++;
 }
 
 #pragma mark - UITableViewDataSource / UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return 5;
+	return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSString * const reuseId = ClassReuseID(BSTAimCell);
 	
 	BSTAimCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
+	cell.dbEntity = self.items[indexPath.row];
 	
 	return cell;
 }
@@ -126,7 +124,7 @@
 //}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-	return self.dataArray.count * (self.infiniteScrollActive ? INFINITE_COUNT_MULTIPLIER : 1);
+	return self.items.count * (self.infiniteScrollActive ? INFINITE_COUNT_MULTIPLIER : 1);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

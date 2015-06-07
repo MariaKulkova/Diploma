@@ -8,16 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "BSTViewModel.h"
+#import "MagicalRecord+Additions.h"
+#import "BSTCategory.h"
 
 @interface BSTAimViewModel : BSTViewModel
 
-@property (nonatomic, strong, readonly) NSMutableArray *categories;
+@property (nonatomic, strong) NSManagedObjectContext *context;
+
+@property (nonatomic, strong, readonly) NSArray *categories;
 @property (nonatomic, strong, readonly) NSArray *aims;
 
-@property (nonatomic, strong) NSString *selectedCategory;
+@property (nonatomic, strong) BSTCategory *selectedCategory;
 
-/// Weak singleton
-+ (instancetype)currentInstance;
-+ (instancetype)sharedInstance;
+- (void)saveChanges;
+- (void)rollbackChanges;
+- (void)addAim:(NSDictionary *)aimInfo intoCategory:(id)dbEntity;
 
 @end

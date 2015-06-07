@@ -11,10 +11,11 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+#pragma mark Content
 
-    // Configure the view for the selected state
+- (void)setDbEntity:(BSTAim *)aim {
+	_dbEntity = aim;
+	self.textLabel.text = aim.title;
 }
 
 @end

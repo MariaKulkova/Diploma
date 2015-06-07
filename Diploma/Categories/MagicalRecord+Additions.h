@@ -18,3 +18,9 @@
 + (void)saveInContextAndWait:(NSManagedObjectContext *)context withBlock:(void (^)(NSManagedObjectContext *context))block;
 
 @end
+
+@interface NSManagedObjectContext (MergingContexts)
+
+- (instancetype)listenChangesFromParentContext;
+
+@end

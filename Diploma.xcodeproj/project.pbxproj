@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4C8AB0B61B175A4300680633 /* BSTParseAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AB0B51B175A4300680633 /* BSTParseAPIClient.m */; };
+		4C9BCF071B2046EC009BCFB7 /* BSTURLComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BCF061B2046EC009BCFB7 /* BSTURLComposer.m */; };
+		4C9BCF0A1B2076F2009BCFB7 /* BSTSyncEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BCF091B2076F2009BCFB7 /* BSTSyncEngine.m */; };
+		4CA8BA421B20D7770036E7BB /* BSTManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8BA411B20D7770036E7BB /* BSTManagedObject.m */; };
+		4CA8BA451B20DBDA0036E7BB /* NSURLSession+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8BA441B20DBDA0036E7BB /* NSURLSession+RACSupport.m */; };
+		4CBE89B91B21C76F006D7ABC /* BSTAddAimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE89B81B21C76F006D7ABC /* BSTAddAimViewController.m */; };
 		4CBEE67D1B187FB80035DC26 /* BSTWebCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEE67C1B187FB80035DC26 /* BSTWebCore.m */; };
-		4CBF132B1B1C9C360004666D /* BSTParseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF132A1B1C9C360004666D /* BSTParseAPIManager.m */; };
 		4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */; };
 		4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A521B11E33F001E7D45 /* BSTUser.m */; };
 		4CCE2A561B11E33F001E7D45 /* BSTStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A551B11E33F001E7D45 /* BSTStep.m */; };
@@ -59,10 +63,19 @@
 		2E60ECAF24FA952DAD5E4B1A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8AB0B41B175A4300680633 /* BSTParseAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTParseAPIClient.h; sourceTree = "<group>"; };
 		4C8AB0B51B175A4300680633 /* BSTParseAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTParseAPIClient.m; sourceTree = "<group>"; };
+		4C9BCF051B2046EC009BCFB7 /* BSTURLComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTURLComposer.h; sourceTree = "<group>"; };
+		4C9BCF061B2046EC009BCFB7 /* BSTURLComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTURLComposer.m; sourceTree = "<group>"; };
+		4C9BCF081B2076F2009BCFB7 /* BSTSyncEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTSyncEngine.h; sourceTree = "<group>"; };
+		4C9BCF091B2076F2009BCFB7 /* BSTSyncEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTSyncEngine.m; sourceTree = "<group>"; };
+		4CA8BA401B20D7770036E7BB /* BSTManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTManagedObject.h; sourceTree = "<group>"; };
+		4CA8BA411B20D7770036E7BB /* BSTManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTManagedObject.m; sourceTree = "<group>"; };
+		4CA8BA431B20DBDA0036E7BB /* NSURLSession+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+RACSupport.h"; sourceTree = "<group>"; };
+		4CA8BA441B20DBDA0036E7BB /* NSURLSession+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+RACSupport.m"; sourceTree = "<group>"; };
+		4CBE89B61B2179CC006D7ABC /* BSTServiceConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSTServiceConstants.h; sourceTree = "<group>"; };
+		4CBE89B71B21C76F006D7ABC /* BSTAddAimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAddAimViewController.h; sourceTree = "<group>"; };
+		4CBE89B81B21C76F006D7ABC /* BSTAddAimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAddAimViewController.m; sourceTree = "<group>"; };
 		4CBEE67B1B187FB80035DC26 /* BSTWebCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTWebCore.h; sourceTree = "<group>"; };
 		4CBEE67C1B187FB80035DC26 /* BSTWebCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTWebCore.m; sourceTree = "<group>"; };
-		4CBF13291B1C9C360004666D /* BSTParseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTParseAPIManager.h; sourceTree = "<group>"; };
-		4CBF132A1B1C9C360004666D /* BSTParseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTParseAPIManager.m; sourceTree = "<group>"; };
 		4CCE2A4E1B11E33E001E7D45 /* BSTPeriodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTPeriodType.h; sourceTree = "<group>"; };
 		4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTPeriodType.m; sourceTree = "<group>"; };
 		4CCE2A511B11E33F001E7D45 /* BSTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTUser.h; sourceTree = "<group>"; };
@@ -165,8 +178,11 @@
 				4C8AB0B51B175A4300680633 /* BSTParseAPIClient.m */,
 				4CBEE67B1B187FB80035DC26 /* BSTWebCore.h */,
 				4CBEE67C1B187FB80035DC26 /* BSTWebCore.m */,
-				4CBF13291B1C9C360004666D /* BSTParseAPIManager.h */,
-				4CBF132A1B1C9C360004666D /* BSTParseAPIManager.m */,
+				4C9BCF051B2046EC009BCFB7 /* BSTURLComposer.h */,
+				4C9BCF061B2046EC009BCFB7 /* BSTURLComposer.m */,
+				4C9BCF081B2076F2009BCFB7 /* BSTSyncEngine.h */,
+				4C9BCF091B2076F2009BCFB7 /* BSTSyncEngine.m */,
+				4CBE89B61B2179CC006D7ABC /* BSTServiceConstants.h */,
 			);
 			name = WebCore;
 			sourceTree = "<group>";
@@ -176,6 +192,8 @@
 			children = (
 				4CCE2A6D1B11E739001E7D45 /* MagicalRecord+Additions.h */,
 				4CCE2A6E1B11E739001E7D45 /* MagicalRecord+Additions.m */,
+				4CA8BA431B20DBDA0036E7BB /* NSURLSession+RACSupport.h */,
+				4CA8BA441B20DBDA0036E7BB /* NSURLSession+RACSupport.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -193,6 +211,8 @@
 		4CCE2A711B11E963001E7D45 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				4CA8BA401B20D7770036E7BB /* BSTManagedObject.h */,
+				4CA8BA411B20D7770036E7BB /* BSTManagedObject.m */,
 				4CCE2A691B11E340001E7D45 /* BSTCategory.h */,
 				4CCE2A6A1B11E340001E7D45 /* BSTCategory.m */,
 				4CCE2A661B11E340001E7D45 /* BSTReminder.h */,
@@ -324,6 +344,8 @@
 				4CCE2A771B1202CD001E7D45 /* BSTRootTabBarController.m */,
 				4CD8AEFB1B13123F0052BE82 /* BSTAimsViewController.h */,
 				4CD8AEFC1B13123F0052BE82 /* BSTAimsViewController.m */,
+				4CBE89B71B21C76F006D7ABC /* BSTAddAimViewController.h */,
+				4CBE89B81B21C76F006D7ABC /* BSTAddAimViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -505,14 +527,16 @@
 				4CDE71F71B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m in Sources */,
 				4CDE71F11B15ACFD00823DA8 /* BSTViewModel.m in Sources */,
 				4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */,
+				4C9BCF0A1B2076F2009BCFB7 /* BSTSyncEngine.m in Sources */,
 				4CDE71F41B15AD5800823DA8 /* BSTAimViewModel.m in Sources */,
 				4CCE2A591B11E33F001E7D45 /* BSTAim.m in Sources */,
-				4CBF132B1B1C9C360004666D /* BSTParseAPIManager.m in Sources */,
 				4CCE2A621B11E33F001E7D45 /* BSTAchievemnt.m in Sources */,
 				4CCE2A561B11E33F001E7D45 /* BSTStep.m in Sources */,
 				4CD8AEFD1B13123F0052BE82 /* BSTAimsViewController.m in Sources */,
 				4CD8B8381B09EC1700C31508 /* AppDelegate.m in Sources */,
 				4CD8AEF91B130B6D0052BE82 /* BSTBaseViewController.m in Sources */,
+				4CA8BA451B20DBDA0036E7BB /* NSURLSession+RACSupport.m in Sources */,
+				4C9BCF071B2046EC009BCFB7 /* BSTURLComposer.m in Sources */,
 				4CCE2A5C1B11E33F001E7D45 /* BSTPeriod.m in Sources */,
 				4CDE72001B15FDCA00823DA8 /* BSTProgressPie.m in Sources */,
 				4CCE2A651B11E340001E7D45 /* BSTRewarding.m in Sources */,
@@ -523,7 +547,9 @@
 				4CD8B83E1B09EC1700C31508 /* ViewController.m in Sources */,
 				4CCE2A6F1B11E739001E7D45 /* MagicalRecord+Additions.m in Sources */,
 				4CDE71EE1B1598A400823DA8 /* BSTAimCell.m in Sources */,
+				4CA8BA421B20D7770036E7BB /* BSTManagedObject.m in Sources */,
 				4CBEE67D1B187FB80035DC26 /* BSTWebCore.m in Sources */,
+				4CBE89B91B21C76F006D7ABC /* BSTAddAimViewController.m in Sources */,
 				4CD8B83B1B09EC1700C31508 /* BSTDatabase.xcdatamodeld in Sources */,
 				4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */,
 				4CCE2A6B1B11E340001E7D45 /* BSTCategory.m in Sources */,
