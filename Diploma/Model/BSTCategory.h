@@ -2,7 +2,7 @@
 //  BSTCategory.h
 //  Diploma
 //
-//  Created by Maria on 24.05.15.
+//  Created by Maria on 08.06.15.
 //  Copyright (c) 2015 Maria. All rights reserved.
 //
 
@@ -14,10 +14,8 @@
 
 @interface BSTCategory : BSTManagedObject
 
-@property (nonatomic)         int64_t  id;
-@property (nonatomic, retain) NSString *title;
-
-@property (nonatomic, retain) NSSet   *aims;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSSet *aims;
 @property (nonatomic, retain) BSTUser *owner;
 @end
 

@@ -96,7 +96,7 @@
 
 @implementation NSManagedObject (Additions)
 
-+ (id)fw_findFirstOrCreateByAttribute:(NSString *)attribute withValue:(id)searchValue inContext:(NSManagedObjectContext *)context {
++ (id)findFirstOrCreateByAttribute:(NSString *)attribute withValue:(id)searchValue inContext:(NSManagedObjectContext *)context {
 	return [self MR_findFirstByAttribute:attribute withValue:searchValue inContext:context] ?: [self MR_createInContext:context];
 }
 

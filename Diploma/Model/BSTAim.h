@@ -2,7 +2,7 @@
 //  BSTAim.h
 //  Diploma
 //
-//  Created by Maria on 24.05.15.
+//  Created by Maria on 08.06.15.
 //  Copyright (c) 2015 Maria. All rights reserved.
 //
 
@@ -10,15 +10,16 @@
 #import <CoreData/CoreData.h>
 #import "BSTManagedObject.h"
 
-@class BSTStep, BSTCategory, BSTStatistics;
+@class BSTCategory, BSTStatistics, BSTStep;
 
 @interface BSTAim : BSTManagedObject
 
-@property (nonatomic)         int64_t     id;
-@property (nonatomic, retain) NSString    *title;
-@property (nonatomic)         BOOL        *completed;
+@property (nonatomic) BOOL    completed;
+@property (nonatomic) int64_t stepsCount;
+@property (nonatomic) int64_t stepsCompleted;
+@property (nonatomic, retain) NSString *title;
 
-@property (nonatomic)         BSTCategory *category;
+@property (nonatomic, retain) BSTCategory *category;
 @property (nonatomic, retain) NSSet       *steps;
 @property (nonatomic, retain) NSSet       *timeStatistics;
 @end

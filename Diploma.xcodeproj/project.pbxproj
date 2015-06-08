@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C8AA2C71B258BD600ADCB83 /* BSTCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AA2C61B258BD600ADCB83 /* BSTCategoriesViewController.m */; };
+		4C8AA2CA1B258C2C00ADCB83 /* BSTAddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AA2C91B258C2C00ADCB83 /* BSTAddCategoryViewController.m */; };
+		4C8AA2CD1B25BBB000ADCB83 /* BSTCategoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AA2CC1B25BBB000ADCB83 /* BSTCategoryViewModel.m */; };
+		4C8AA2D01B25C32E00ADCB83 /* BSTCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AA2CF1B25C32E00ADCB83 /* BSTCategoryCell.m */; };
+		4C8AA2D31B25D18B00ADCB83 /* BSTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AA2D21B25D18B00ADCB83 /* BSTCategory.m */; };
+		4C8AA2D61B25DDDE00ADCB83 /* BSTAimDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AA2D51B25DDDE00ADCB83 /* BSTAimDescriptionViewController.m */; };
 		4C8AB0B61B175A4300680633 /* BSTParseAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AB0B51B175A4300680633 /* BSTParseAPIClient.m */; };
 		4C9BCF071B2046EC009BCFB7 /* BSTURLComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BCF061B2046EC009BCFB7 /* BSTURLComposer.m */; };
 		4C9BCF0A1B2076F2009BCFB7 /* BSTSyncEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BCF091B2076F2009BCFB7 /* BSTSyncEngine.m */; };
@@ -14,16 +20,15 @@
 		4CA8BA451B20DBDA0036E7BB /* NSURLSession+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8BA441B20DBDA0036E7BB /* NSURLSession+RACSupport.m */; };
 		4CBE89B91B21C76F006D7ABC /* BSTAddAimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE89B81B21C76F006D7ABC /* BSTAddAimViewController.m */; };
 		4CBEE67D1B187FB80035DC26 /* BSTWebCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEE67C1B187FB80035DC26 /* BSTWebCore.m */; };
+		4CC9E24B1B2565E000E72074 /* BSTAim.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9E24A1B2565E000E72074 /* BSTAim.m */; };
 		4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */; };
 		4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A521B11E33F001E7D45 /* BSTUser.m */; };
 		4CCE2A561B11E33F001E7D45 /* BSTStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A551B11E33F001E7D45 /* BSTStep.m */; };
-		4CCE2A591B11E33F001E7D45 /* BSTAim.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A581B11E33F001E7D45 /* BSTAim.m */; };
 		4CCE2A5C1B11E33F001E7D45 /* BSTPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A5B1B11E33F001E7D45 /* BSTPeriod.m */; };
 		4CCE2A5F1B11E33F001E7D45 /* BSTStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A5E1B11E33F001E7D45 /* BSTStatistics.m */; };
 		4CCE2A621B11E33F001E7D45 /* BSTAchievemnt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A611B11E33F001E7D45 /* BSTAchievemnt.m */; };
 		4CCE2A651B11E340001E7D45 /* BSTRewarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A641B11E340001E7D45 /* BSTRewarding.m */; };
 		4CCE2A681B11E340001E7D45 /* BSTReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A671B11E340001E7D45 /* BSTReminder.m */; };
-		4CCE2A6B1B11E340001E7D45 /* BSTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A6A1B11E340001E7D45 /* BSTCategory.m */; };
 		4CCE2A6F1B11E739001E7D45 /* MagicalRecord+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A6E1B11E739001E7D45 /* MagicalRecord+Additions.m */; };
 		4CCE2A781B1202CD001E7D45 /* BSTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A771B1202CD001E7D45 /* BSTRootTabBarController.m */; };
 		4CD8AEF91B130B6D0052BE82 /* BSTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AEF81B130B6D0052BE82 /* BSTBaseViewController.m */; };
@@ -61,6 +66,18 @@
 /* Begin PBXFileReference section */
 		027FDBF632066E681DE1F75D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2E60ECAF24FA952DAD5E4B1A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C8AA2C51B258BD600ADCB83 /* BSTCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTCategoriesViewController.h; sourceTree = "<group>"; };
+		4C8AA2C61B258BD600ADCB83 /* BSTCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTCategoriesViewController.m; sourceTree = "<group>"; };
+		4C8AA2C81B258C2C00ADCB83 /* BSTAddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAddCategoryViewController.h; sourceTree = "<group>"; };
+		4C8AA2C91B258C2C00ADCB83 /* BSTAddCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAddCategoryViewController.m; sourceTree = "<group>"; };
+		4C8AA2CB1B25BBB000ADCB83 /* BSTCategoryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTCategoryViewModel.h; sourceTree = "<group>"; };
+		4C8AA2CC1B25BBB000ADCB83 /* BSTCategoryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTCategoryViewModel.m; sourceTree = "<group>"; };
+		4C8AA2CE1B25C32E00ADCB83 /* BSTCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTCategoryCell.h; sourceTree = "<group>"; };
+		4C8AA2CF1B25C32E00ADCB83 /* BSTCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTCategoryCell.m; sourceTree = "<group>"; };
+		4C8AA2D11B25D18B00ADCB83 /* BSTCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTCategory.h; sourceTree = "<group>"; };
+		4C8AA2D21B25D18B00ADCB83 /* BSTCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTCategory.m; sourceTree = "<group>"; };
+		4C8AA2D41B25DDDE00ADCB83 /* BSTAimDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAimDescriptionViewController.h; sourceTree = "<group>"; };
+		4C8AA2D51B25DDDE00ADCB83 /* BSTAimDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAimDescriptionViewController.m; sourceTree = "<group>"; };
 		4C8AB0B41B175A4300680633 /* BSTParseAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTParseAPIClient.h; sourceTree = "<group>"; };
 		4C8AB0B51B175A4300680633 /* BSTParseAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTParseAPIClient.m; sourceTree = "<group>"; };
 		4C9BCF051B2046EC009BCFB7 /* BSTURLComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTURLComposer.h; sourceTree = "<group>"; };
@@ -76,14 +93,14 @@
 		4CBE89B81B21C76F006D7ABC /* BSTAddAimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAddAimViewController.m; sourceTree = "<group>"; };
 		4CBEE67B1B187FB80035DC26 /* BSTWebCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTWebCore.h; sourceTree = "<group>"; };
 		4CBEE67C1B187FB80035DC26 /* BSTWebCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTWebCore.m; sourceTree = "<group>"; };
+		4CC9E2491B2565E000E72074 /* BSTAim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAim.h; sourceTree = "<group>"; };
+		4CC9E24A1B2565E000E72074 /* BSTAim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAim.m; sourceTree = "<group>"; };
 		4CCE2A4E1B11E33E001E7D45 /* BSTPeriodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTPeriodType.h; sourceTree = "<group>"; };
 		4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTPeriodType.m; sourceTree = "<group>"; };
 		4CCE2A511B11E33F001E7D45 /* BSTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTUser.h; sourceTree = "<group>"; };
 		4CCE2A521B11E33F001E7D45 /* BSTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTUser.m; sourceTree = "<group>"; };
 		4CCE2A541B11E33F001E7D45 /* BSTStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStep.h; sourceTree = "<group>"; };
 		4CCE2A551B11E33F001E7D45 /* BSTStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTStep.m; sourceTree = "<group>"; };
-		4CCE2A571B11E33F001E7D45 /* BSTAim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAim.h; sourceTree = "<group>"; };
-		4CCE2A581B11E33F001E7D45 /* BSTAim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAim.m; sourceTree = "<group>"; };
 		4CCE2A5A1B11E33F001E7D45 /* BSTPeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTPeriod.h; sourceTree = "<group>"; };
 		4CCE2A5B1B11E33F001E7D45 /* BSTPeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTPeriod.m; sourceTree = "<group>"; };
 		4CCE2A5D1B11E33F001E7D45 /* BSTStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStatistics.h; sourceTree = "<group>"; };
@@ -94,8 +111,6 @@
 		4CCE2A641B11E340001E7D45 /* BSTRewarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTRewarding.m; sourceTree = "<group>"; };
 		4CCE2A661B11E340001E7D45 /* BSTReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTReminder.h; sourceTree = "<group>"; };
 		4CCE2A671B11E340001E7D45 /* BSTReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTReminder.m; sourceTree = "<group>"; };
-		4CCE2A691B11E340001E7D45 /* BSTCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTCategory.h; sourceTree = "<group>"; };
-		4CCE2A6A1B11E340001E7D45 /* BSTCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTCategory.m; sourceTree = "<group>"; };
 		4CCE2A6D1B11E739001E7D45 /* MagicalRecord+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MagicalRecord+Additions.h"; sourceTree = "<group>"; };
 		4CCE2A6E1B11E739001E7D45 /* MagicalRecord+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MagicalRecord+Additions.m"; sourceTree = "<group>"; };
 		4CCE2A721B11E99E001E7D45 /* nsuserdefaults-helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nsuserdefaults-helper.h"; sourceTree = "<group>"; };
@@ -213,8 +228,6 @@
 			children = (
 				4CA8BA401B20D7770036E7BB /* BSTManagedObject.h */,
 				4CA8BA411B20D7770036E7BB /* BSTManagedObject.m */,
-				4CCE2A691B11E340001E7D45 /* BSTCategory.h */,
-				4CCE2A6A1B11E340001E7D45 /* BSTCategory.m */,
 				4CCE2A661B11E340001E7D45 /* BSTReminder.h */,
 				4CCE2A671B11E340001E7D45 /* BSTReminder.m */,
 				4CCE2A631B11E340001E7D45 /* BSTRewarding.h */,
@@ -225,8 +238,10 @@
 				4CCE2A5E1B11E33F001E7D45 /* BSTStatistics.m */,
 				4CCE2A5A1B11E33F001E7D45 /* BSTPeriod.h */,
 				4CCE2A5B1B11E33F001E7D45 /* BSTPeriod.m */,
-				4CCE2A571B11E33F001E7D45 /* BSTAim.h */,
-				4CCE2A581B11E33F001E7D45 /* BSTAim.m */,
+				4C8AA2D11B25D18B00ADCB83 /* BSTCategory.h */,
+				4C8AA2D21B25D18B00ADCB83 /* BSTCategory.m */,
+				4CC9E2491B2565E000E72074 /* BSTAim.h */,
+				4CC9E24A1B2565E000E72074 /* BSTAim.m */,
 				4CCE2A541B11E33F001E7D45 /* BSTStep.h */,
 				4CCE2A551B11E33F001E7D45 /* BSTStep.m */,
 				4CCE2A511B11E33F001E7D45 /* BSTUser.h */,
@@ -346,6 +361,12 @@
 				4CD8AEFC1B13123F0052BE82 /* BSTAimsViewController.m */,
 				4CBE89B71B21C76F006D7ABC /* BSTAddAimViewController.h */,
 				4CBE89B81B21C76F006D7ABC /* BSTAddAimViewController.m */,
+				4C8AA2C51B258BD600ADCB83 /* BSTCategoriesViewController.h */,
+				4C8AA2C61B258BD600ADCB83 /* BSTCategoriesViewController.m */,
+				4C8AA2C81B258C2C00ADCB83 /* BSTAddCategoryViewController.h */,
+				4C8AA2C91B258C2C00ADCB83 /* BSTAddCategoryViewController.m */,
+				4C8AA2D41B25DDDE00ADCB83 /* BSTAimDescriptionViewController.h */,
+				4C8AA2D51B25DDDE00ADCB83 /* BSTAimDescriptionViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +378,8 @@
 				4CDE71F01B15ACFD00823DA8 /* BSTViewModel.m */,
 				4CDE71F21B15AD5800823DA8 /* BSTAimViewModel.h */,
 				4CDE71F31B15AD5800823DA8 /* BSTAimViewModel.m */,
+				4C8AA2CB1B25BBB000ADCB83 /* BSTCategoryViewModel.h */,
+				4C8AA2CC1B25BBB000ADCB83 /* BSTCategoryViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -366,10 +389,12 @@
 			children = (
 				4CDE71EC1B1598A400823DA8 /* BSTAimCell.h */,
 				4CDE71ED1B1598A400823DA8 /* BSTAimCell.m */,
-				4CDE71F51B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.h */,
-				4CDE71F61B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m */,
+				4C8AA2CE1B25C32E00ADCB83 /* BSTCategoryCell.h */,
+				4C8AA2CF1B25C32E00ADCB83 /* BSTCategoryCell.m */,
 				4CDE71F81B15B4B300823DA8 /* BSTCategoryNameCell.h */,
 				4CDE71F91B15B4B300823DA8 /* BSTCategoryNameCell.m */,
+				4CDE71F51B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.h */,
+				4CDE71F61B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m */,
 				4CDE71FB1B15D84C00823DA8 /* BSTSegmentedControl.h */,
 				4CDE71FC1B15D84C00823DA8 /* BSTSegmentedControl.m */,
 				4CDE71FE1B15FDCA00823DA8 /* BSTProgressPie.h */,
@@ -524,22 +549,26 @@
 				4CCE2A781B1202CD001E7D45 /* BSTRootTabBarController.m in Sources */,
 				4CCE2A5F1B11E33F001E7D45 /* BSTStatistics.m in Sources */,
 				4CDE71FD1B15D84C00823DA8 /* BSTSegmentedControl.m in Sources */,
+				4C8AA2C71B258BD600ADCB83 /* BSTCategoriesViewController.m in Sources */,
 				4CDE71F71B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m in Sources */,
 				4CDE71F11B15ACFD00823DA8 /* BSTViewModel.m in Sources */,
+				4CC9E24B1B2565E000E72074 /* BSTAim.m in Sources */,
 				4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */,
 				4C9BCF0A1B2076F2009BCFB7 /* BSTSyncEngine.m in Sources */,
 				4CDE71F41B15AD5800823DA8 /* BSTAimViewModel.m in Sources */,
-				4CCE2A591B11E33F001E7D45 /* BSTAim.m in Sources */,
 				4CCE2A621B11E33F001E7D45 /* BSTAchievemnt.m in Sources */,
 				4CCE2A561B11E33F001E7D45 /* BSTStep.m in Sources */,
 				4CD8AEFD1B13123F0052BE82 /* BSTAimsViewController.m in Sources */,
 				4CD8B8381B09EC1700C31508 /* AppDelegate.m in Sources */,
+				4C8AA2D61B25DDDE00ADCB83 /* BSTAimDescriptionViewController.m in Sources */,
 				4CD8AEF91B130B6D0052BE82 /* BSTBaseViewController.m in Sources */,
 				4CA8BA451B20DBDA0036E7BB /* NSURLSession+RACSupport.m in Sources */,
+				4C8AA2CA1B258C2C00ADCB83 /* BSTAddCategoryViewController.m in Sources */,
 				4C9BCF071B2046EC009BCFB7 /* BSTURLComposer.m in Sources */,
 				4CCE2A5C1B11E33F001E7D45 /* BSTPeriod.m in Sources */,
 				4CDE72001B15FDCA00823DA8 /* BSTProgressPie.m in Sources */,
 				4CCE2A651B11E340001E7D45 /* BSTRewarding.m in Sources */,
+				4C8AA2CD1B25BBB000ADCB83 /* BSTCategoryViewModel.m in Sources */,
 				4CD8B8351B09EC1700C31508 /* main.m in Sources */,
 				4C8AB0B61B175A4300680633 /* BSTParseAPIClient.m in Sources */,
 				4CCE2A681B11E340001E7D45 /* BSTReminder.m in Sources */,
@@ -547,12 +576,13 @@
 				4CD8B83E1B09EC1700C31508 /* ViewController.m in Sources */,
 				4CCE2A6F1B11E739001E7D45 /* MagicalRecord+Additions.m in Sources */,
 				4CDE71EE1B1598A400823DA8 /* BSTAimCell.m in Sources */,
+				4C8AA2D31B25D18B00ADCB83 /* BSTCategory.m in Sources */,
 				4CA8BA421B20D7770036E7BB /* BSTManagedObject.m in Sources */,
 				4CBEE67D1B187FB80035DC26 /* BSTWebCore.m in Sources */,
 				4CBE89B91B21C76F006D7ABC /* BSTAddAimViewController.m in Sources */,
 				4CD8B83B1B09EC1700C31508 /* BSTDatabase.xcdatamodeld in Sources */,
+				4C8AA2D01B25C32E00ADCB83 /* BSTCategoryCell.m in Sources */,
 				4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */,
-				4CCE2A6B1B11E340001E7D45 /* BSTCategory.m in Sources */,
 				4CD8B8641B0A1C9E00C31508 /* CanvasView.m in Sources */,
 				4CDE72031B1606B900823DA8 /* BSTSpline.m in Sources */,
 			);

@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BSTManagedObject.h"
 
 @class BSTAim, BSTReminder;
 
-@interface BSTStep : NSManagedObject
+@interface BSTStep : BSTManagedObject
 
-@property (nonatomic)         int64_t  id;
 @property (nonatomic)         BOOL     achieved;
 @property (nonatomic, retain) NSDate   *deadline;
 @property (nonatomic, retain) NSString *title;

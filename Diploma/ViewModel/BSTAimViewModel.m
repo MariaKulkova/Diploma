@@ -53,7 +53,6 @@
 - (void)saveChanges {
 	NSLog(@"Save to persistent storage");
 	[self.context MR_saveToPersistentStoreAndWait];
-	//[self.context MR_saveToPersistentStoreWithCompletion:nil];
 }
 
 - (void)rollbackChanges {
@@ -63,7 +62,6 @@
 - (void)addAim:(NSDictionary *)aimInfo intoCategory:(id)dbEntity {
 	BSTAim *aim = [BSTAim MR_createInContext:self.context];
 	[aim fillWithUserInfo:aimInfo];
-	NSArray *a = [BSTAim MR_findAllSortedBy:Key(BSTAim, title) ascending:YES inContext:self.context];
 	[self saveChanges];
 	self.aims = [BSTAim MR_findAllSortedBy:Key(BSTAim, title) ascending:YES inContext:self.context.parentContext];
 }

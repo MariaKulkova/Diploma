@@ -16,3 +16,18 @@
 }
 
 @end
+
+@implementation BSTManagedObject (Custom)
+
++ (void)deprecateEntities:(id<NSFastEnumeration>)entities inContext:(NSManagedObjectContext *)context {
+	for (BSTManagedObject *entity in entities) {
+		NSLog(@"Deprecate %@", entity);
+		[entity MR_deleteInContext:context];
+	}
+}
+
+- (void)deprecateEntities:(id<NSFastEnumeration>)entities {
+	[[self class] deprecateEntities:entities inContext:self.managedObjectContext];
+}
+
+@end

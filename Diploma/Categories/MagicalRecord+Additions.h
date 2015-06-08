@@ -24,3 +24,9 @@
 - (instancetype)listenChangesFromParentContext;
 
 @end
+
+@interface NSManagedObject (Additions)
+
++ (id)findFirstOrCreateByAttribute:(NSString *)attribute withValue:(id)searchValue inContext:(NSManagedObjectContext *)context;
+
+@end

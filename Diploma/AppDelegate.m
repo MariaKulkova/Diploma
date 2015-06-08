@@ -21,29 +21,17 @@
 - (void)setupEnvironment {
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-//		[MagicalRecord setupCoreDataStackWithStoreNamed:@"BSTDatabase"];
+		[MagicalRecord setupCoreDataStackWithStoreNamed:@"BSTDatabase"];
 	});
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[self setupEnvironment];
-	[MagicalRecord setupCoreDataStackWithStoreNamed:@"BSTDatabase"];
 	
-	NSArray *ar = [BSTAim MR_findAll];
-	
-	BSTCategory *category = [BSTCategory MR_createEntity];
-	category.id = 1;
-	category.title = @"All";
-	
-	BSTAim *aim = [BSTAim MR_createEntity];
-	aim.title = @"kjhkj";
-	
-	[category addAimsObject:aim];
-	aim.category = category;
-	
-	[[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
-	
-	NSArray *ar2 = [BSTAim MR_findAll];
+//	BSTCategory *cat = [BSTCategory MR_createEntity];
+//	cat.title = @"work";
+//	
+//	[[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
 	
 	return YES;
 }

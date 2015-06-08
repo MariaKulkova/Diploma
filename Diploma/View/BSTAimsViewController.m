@@ -24,8 +24,7 @@
 @property (nonatomic, strong) BSTAimViewModel *viewModel;
 
 @property (nonatomic, strong) NSArray *items;
-
-@property (nonatomic) int number;
+@property (nonatomic, strong) NSArray *categories;
 
 @end
 
@@ -34,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.infiniteScrollActive = YES;
-	self.number = 1;
+	
 	[self bindModel];
 }
 
@@ -49,6 +48,19 @@
 	return RACObserve(self.viewModel, aims);
 }
 
+- (RACSignal *)collectionItemsObserver {
+	return RACObserve(self.viewModel, categories);
+}
+
+- (IBAction)swipeSelector:(id)sender {
+	CGPoint location = [sender locationInView:self.tableView];
+	NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
+	BSTAimCell *cell = (BSTAimCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+	CGRect frame = cell.frame;
+	frame.origin.x += 50;
+	[cell setFrame:frame];
+}
+
 #pragma mark - <UIScrollViewDelegate>
 
 
@@ -61,14 +73,17 @@
 		self.items = items;
 		[self.tableView reloadData];
 	}];
+	
+	[[[self.collectionItemsObserver replayLast] deliverOnMainThread] subscribeNext:^(NSArray *items) {
+		@strongify(self);
+		self.categories = items;
+		[self.catalogsCollectionView reloadData];
+	}];
 }
 - (IBAction)addEntity:(id)sender {
-	srand48(time(0));
 	NSMutableDictionary *aimInfo = [[NSMutableDictionary alloc] init];
 	[aimInfo setValue:@"test" forKey:@"title"];
-	[aimInfo setValue:@"All" forKey:@"category"];
-	[self.viewModel addAim:aimInfo intoCategory:[NSNumber numberWithInt:self.number]];
-	self.number++;
+	[self.viewModel addAim:aimInfo intoCategory:nil];
 }
 
 #pragma mark - UITableViewDataSource / UITableViewDelegate
@@ -124,7 +139,7 @@
 //}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-	return self.items.count * (self.infiniteScrollActive ? INFINITE_COUNT_MULTIPLIER : 1);
+	return self.categories.count * (self.infiniteScrollActive ? INFINITE_COUNT_MULTIPLIER : 1);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

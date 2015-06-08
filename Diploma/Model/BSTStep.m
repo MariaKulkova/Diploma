@@ -13,7 +13,6 @@
 
 @dynamic achieved;
 @dynamic deadline;
-@dynamic id;
 @dynamic title;
 @dynamic aim;
 @dynamic reminder;
@@ -23,6 +22,16 @@
 @implementation BSTStep (Fill)
 
 - (void)fillWithUserData:(NSDictionary *)info {
+	self.title = info[@"title"];
+	self.achieved = [info[@"achieved"] boolValue];
+}
+
+- (NSDictionary *)representInfo {
+	NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+	[dictionary setValue:self.title forKey:@"title"];
+	[dictionary setValue:[NSNumber numberWithBool:self.achieved] forKey:@"achieved"];
+	
+	return dictionary;
 }
 
 @end

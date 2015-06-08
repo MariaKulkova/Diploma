@@ -1,17 +1,16 @@
 //
-//  BSTCategoryNameCell.h
+//  BSTCategoryCell.h
 //  Diploma
 //
-//  Created by Maria on 27.05.15.
+//  Created by Maria on 08.06.15.
 //  Copyright (c) 2015 Maria. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "BSTCategory.h"
 
-@interface BSTCategoryNameCell : UICollectionViewCell
+@interface BSTCategoryCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *label;
 @property (nonatomic, strong) BSTCategory *dbEntity;
 
 @end
