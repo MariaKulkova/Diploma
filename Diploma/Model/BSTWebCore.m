@@ -42,10 +42,37 @@ static NSString * const kSDFParseAPIKey = @"1CQKgBONmElYOV1AsS2BxONFqN9MzFurl2J4
 }
 
 - (void)initialize {
+	
+}
+
+- (NSDictionary *)defaultHeaders {
 	NSMutableDictionary *headersDictionary = [[NSMutableDictionary alloc] init];
+	[headersDictionary setValue:@"application/json" forKey:@"Content-Type"];
 	[headersDictionary setValue:kSDFParseAPIApplicationId forKey:@"X-Parse-Application-Id"];
 	[headersDictionary setValue:kSDFParseAPIKey forKey:@"X-Parse-REST-API-Key"];
 	self.parseAuthHeaders = [NSDictionary dictionaryWithDictionary:headersDictionary];
+	return headersDictionary;
+}
+
+- (NSDictionary *)authHeaders {
+	NSMutableDictionary *headersDictionary = [[self defaultHeaders] mutableCopy];
+	//[headersDictionary setValue:<#(id)#> forKey:@"X-Parse-Session-Token"];
+	return headersDictionary;
+}
+
+
+/// @return Default configuration for all hosts
+- (NSURLSessionConfiguration *)defaultConfiguration {
+	NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+	configuration.HTTPAdditionalHeaders = self.defaultHeaders;
+	return configuration;
+}
+
+/// @return Configuration object if authorization fields was found, otherwise nil
+- (NSURLSessionConfiguration *)fanwireConfiguration {
+	NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+	configuration.HTTPAdditionalHeaders = self.authHeaders;
+	return configuration;
 }
 
 + (NSURLSession *)sharedSession {
@@ -59,13 +86,5 @@ static NSString * const kSDFParseAPIKey = @"1CQKgBONmElYOV1AsS2BxONFqN9MzFurl2J4
 	}
 	return _parseSession;
 }
-
-
-- (NSURLSessionConfiguration *)defaultConfiguration {
-	NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-	configuration.HTTPAdditionalHeaders = self.parseAuthHeaders;
-	return configuration;
-}
-
 
 @end

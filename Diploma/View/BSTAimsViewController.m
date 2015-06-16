@@ -32,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[super addAppTitle];
 	self.infiniteScrollActive = YES;
 	
 	[self bindModel];
@@ -50,15 +51,6 @@
 
 - (RACSignal *)collectionItemsObserver {
 	return RACObserve(self.viewModel, categories);
-}
-
-- (IBAction)swipeSelector:(id)sender {
-	CGPoint location = [sender locationInView:self.tableView];
-	NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
-	BSTAimCell *cell = (BSTAimCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-	CGRect frame = cell.frame;
-	frame.origin.x += 50;
-	[cell setFrame:frame];
 }
 
 #pragma mark - <UIScrollViewDelegate>
@@ -89,14 +81,15 @@
 #pragma mark - UITableViewDataSource / UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return self.items.count;
+	//return self.items.count;
+	return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSString * const reuseId = ClassReuseID(BSTAimCell);
 	
 	BSTAimCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
-	cell.dbEntity = self.items[indexPath.row];
+	//cell.dbEntity = self.items[indexPath.row];
 	
 	return cell;
 }
@@ -139,7 +132,8 @@
 //}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-	return self.categories.count * (self.infiniteScrollActive ? INFINITE_COUNT_MULTIPLIER : 1);
+	//return self.categories.count * (self.infiniteScrollActive ? INFINITE_COUNT_MULTIPLIER : 1);
+	return 10 * (self.infiniteScrollActive ? INFINITE_COUNT_MULTIPLIER : 1);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

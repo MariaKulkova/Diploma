@@ -30,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[super addAppTitle];
 	
 	[self bindModel];
 }
@@ -58,14 +59,15 @@
 #pragma mark - UITableViewDataSource / UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return self.items.count;
+	//return self.items.count;
+	return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSString * const reuseId = ClassReuseID(BSTCategoryCell);
 	
 	BSTCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
-	cell.dbEntity = self.items[indexPath.row];
+	//cell.dbEntity = self.items[indexPath.row];
 	
 	return cell;
 }

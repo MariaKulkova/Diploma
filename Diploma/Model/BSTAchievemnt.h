@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BSTManagedObject.h"
 
 @class BSTRewarding;
 
-@interface BSTAchievemnt : NSManagedObject
+@interface BSTAchievemnt : BSTManagedObject
 
 @property (nonatomic)         int64_t  id;
 @property (nonatomic, retain) NSString *title;

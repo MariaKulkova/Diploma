@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C89D42E1B3012C400219FB1 /* BSTRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C89D42D1B3012C400219FB1 /* BSTRootViewController.m */; };
 		4C8AA2C71B258BD600ADCB83 /* BSTCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AA2C61B258BD600ADCB83 /* BSTCategoriesViewController.m */; };
 		4C8AA2CA1B258C2C00ADCB83 /* BSTAddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AA2C91B258C2C00ADCB83 /* BSTAddCategoryViewController.m */; };
 		4C8AA2CD1B25BBB000ADCB83 /* BSTCategoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AA2CC1B25BBB000ADCB83 /* BSTCategoryViewModel.m */; };
@@ -20,7 +21,20 @@
 		4CA8BA451B20DBDA0036E7BB /* NSURLSession+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8BA441B20DBDA0036E7BB /* NSURLSession+RACSupport.m */; };
 		4CBE89B91B21C76F006D7ABC /* BSTAddAimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE89B81B21C76F006D7ABC /* BSTAddAimViewController.m */; };
 		4CBEE67D1B187FB80035DC26 /* BSTWebCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEE67C1B187FB80035DC26 /* BSTWebCore.m */; };
+		4CBF670F1B2EB9640096869D /* BSTStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF670E1B2EB9640096869D /* BSTStepCell.m */; };
 		4CC9E24B1B2565E000E72074 /* BSTAim.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9E24A1B2565E000E72074 /* BSTAim.m */; };
+		4CCA0DF61B2826E000E139F1 /* BSTStepViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0DF51B2826E000E139F1 /* BSTStepViewModel.m */; };
+		4CCA0DF91B2826F200E139F1 /* BSTUserProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0DF81B2826F200E139F1 /* BSTUserProfileViewModel.m */; };
+		4CCA0DFC1B28282400E139F1 /* BSTStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0DFB1B28282400E139F1 /* BSTStepViewController.m */; };
+		4CCA0DFF1B28284200E139F1 /* BSTAddStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0DFE1B28284200E139F1 /* BSTAddStepViewController.m */; };
+		4CCA0E021B28286900E139F1 /* BSTUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0E011B28286900E139F1 /* BSTUserProfileViewController.m */; };
+		4CCA0E061B2828D000E139F1 /* BSTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0E051B2828D000E139F1 /* BSTLoginViewController.m */; };
+		4CCA0E091B2828DF00E139F1 /* BSTRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0E081B2828DF00E139F1 /* BSTRegistrationViewController.m */; };
+		4CCA0E0C1B2828EF00E139F1 /* BSTResetPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0E0B1B2828EF00E139F1 /* BSTResetPassViewController.m */; };
+		4CCA0E101B28293700E139F1 /* BSTLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0E0F1B28293700E139F1 /* BSTLoginViewModel.m */; };
+		4CCA0E131B28294900E139F1 /* BSTRegistrationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0E121B28294900E139F1 /* BSTRegistrationViewModel.m */; };
+		4CCA0E161B28295D00E139F1 /* BSTResetPassViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0E151B28295D00E139F1 /* BSTResetPassViewModel.m */; };
+		4CCC078B1B28CD6200B8D8F9 /* BSTNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC078A1B28CD6200B8D8F9 /* BSTNotificationViewController.m */; };
 		4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */; };
 		4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A521B11E33F001E7D45 /* BSTUser.m */; };
 		4CCE2A561B11E33F001E7D45 /* BSTStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A551B11E33F001E7D45 /* BSTStep.m */; };
@@ -36,12 +50,11 @@
 		4CD8B8351B09EC1700C31508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8341B09EC1700C31508 /* main.m */; };
 		4CD8B8381B09EC1700C31508 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8371B09EC1700C31508 /* AppDelegate.m */; };
 		4CD8B83B1B09EC1700C31508 /* BSTDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8391B09EC1700C31508 /* BSTDatabase.xcdatamodeld */; };
-		4CD8B83E1B09EC1700C31508 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B83D1B09EC1700C31508 /* ViewController.m */; };
 		4CD8B8411B09EC1700C31508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8B83F1B09EC1700C31508 /* Main.storyboard */; };
 		4CD8B8431B09EC1700C31508 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8B8421B09EC1700C31508 /* Images.xcassets */; };
 		4CD8B8461B09EC1700C31508 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8B8441B09EC1700C31508 /* LaunchScreen.xib */; };
 		4CD8B8521B09EC1700C31508 /* DiplomaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8511B09EC1700C31508 /* DiplomaTests.m */; };
-		4CD8B8641B0A1C9E00C31508 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8631B0A1C9E00C31508 /* CanvasView.m */; };
+		4CD8B8641B0A1C9E00C31508 /* BSTPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8631B0A1C9E00C31508 /* BSTPathView.m */; };
 		4CDE71EE1B1598A400823DA8 /* BSTAimCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE71ED1B1598A400823DA8 /* BSTAimCell.m */; };
 		4CDE71F11B15ACFD00823DA8 /* BSTViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE71F01B15ACFD00823DA8 /* BSTViewModel.m */; };
 		4CDE71F41B15AD5800823DA8 /* BSTAimViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE71F31B15AD5800823DA8 /* BSTAimViewModel.m */; };
@@ -66,6 +79,9 @@
 /* Begin PBXFileReference section */
 		027FDBF632066E681DE1F75D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2E60ECAF24FA952DAD5E4B1A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C19BE801B3037D9001B786C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4C89D42C1B3012C400219FB1 /* BSTRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTRootViewController.h; sourceTree = "<group>"; };
+		4C89D42D1B3012C400219FB1 /* BSTRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTRootViewController.m; sourceTree = "<group>"; };
 		4C8AA2C51B258BD600ADCB83 /* BSTCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTCategoriesViewController.h; sourceTree = "<group>"; };
 		4C8AA2C61B258BD600ADCB83 /* BSTCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTCategoriesViewController.m; sourceTree = "<group>"; };
 		4C8AA2C81B258C2C00ADCB83 /* BSTAddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAddCategoryViewController.h; sourceTree = "<group>"; };
@@ -93,8 +109,34 @@
 		4CBE89B81B21C76F006D7ABC /* BSTAddAimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAddAimViewController.m; sourceTree = "<group>"; };
 		4CBEE67B1B187FB80035DC26 /* BSTWebCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTWebCore.h; sourceTree = "<group>"; };
 		4CBEE67C1B187FB80035DC26 /* BSTWebCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTWebCore.m; sourceTree = "<group>"; };
+		4CBF670D1B2EB9630096869D /* BSTStepCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStepCell.h; sourceTree = "<group>"; };
+		4CBF670E1B2EB9640096869D /* BSTStepCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTStepCell.m; sourceTree = "<group>"; };
 		4CC9E2491B2565E000E72074 /* BSTAim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAim.h; sourceTree = "<group>"; };
 		4CC9E24A1B2565E000E72074 /* BSTAim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAim.m; sourceTree = "<group>"; };
+		4CCA0DF41B2826E000E139F1 /* BSTStepViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStepViewModel.h; sourceTree = "<group>"; };
+		4CCA0DF51B2826E000E139F1 /* BSTStepViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTStepViewModel.m; sourceTree = "<group>"; };
+		4CCA0DF71B2826F200E139F1 /* BSTUserProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTUserProfileViewModel.h; sourceTree = "<group>"; };
+		4CCA0DF81B2826F200E139F1 /* BSTUserProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTUserProfileViewModel.m; sourceTree = "<group>"; };
+		4CCA0DFA1B28282400E139F1 /* BSTStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStepViewController.h; sourceTree = "<group>"; };
+		4CCA0DFB1B28282400E139F1 /* BSTStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTStepViewController.m; sourceTree = "<group>"; };
+		4CCA0DFD1B28284200E139F1 /* BSTAddStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAddStepViewController.h; sourceTree = "<group>"; };
+		4CCA0DFE1B28284200E139F1 /* BSTAddStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAddStepViewController.m; sourceTree = "<group>"; };
+		4CCA0E001B28286900E139F1 /* BSTUserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTUserProfileViewController.h; sourceTree = "<group>"; };
+		4CCA0E011B28286900E139F1 /* BSTUserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTUserProfileViewController.m; sourceTree = "<group>"; };
+		4CCA0E041B2828D000E139F1 /* BSTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTLoginViewController.h; sourceTree = "<group>"; };
+		4CCA0E051B2828D000E139F1 /* BSTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTLoginViewController.m; sourceTree = "<group>"; };
+		4CCA0E071B2828DF00E139F1 /* BSTRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTRegistrationViewController.h; sourceTree = "<group>"; };
+		4CCA0E081B2828DF00E139F1 /* BSTRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTRegistrationViewController.m; sourceTree = "<group>"; };
+		4CCA0E0A1B2828EF00E139F1 /* BSTResetPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTResetPassViewController.h; sourceTree = "<group>"; };
+		4CCA0E0B1B2828EF00E139F1 /* BSTResetPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTResetPassViewController.m; sourceTree = "<group>"; };
+		4CCA0E0E1B28293700E139F1 /* BSTLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTLoginViewModel.h; sourceTree = "<group>"; };
+		4CCA0E0F1B28293700E139F1 /* BSTLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTLoginViewModel.m; sourceTree = "<group>"; };
+		4CCA0E111B28294900E139F1 /* BSTRegistrationViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTRegistrationViewModel.h; sourceTree = "<group>"; };
+		4CCA0E121B28294900E139F1 /* BSTRegistrationViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTRegistrationViewModel.m; sourceTree = "<group>"; };
+		4CCA0E141B28295D00E139F1 /* BSTResetPassViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTResetPassViewModel.h; sourceTree = "<group>"; };
+		4CCA0E151B28295D00E139F1 /* BSTResetPassViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTResetPassViewModel.m; sourceTree = "<group>"; };
+		4CCC07891B28CD6200B8D8F9 /* BSTNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTNotificationViewController.h; sourceTree = "<group>"; };
+		4CCC078A1B28CD6200B8D8F9 /* BSTNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTNotificationViewController.m; sourceTree = "<group>"; };
 		4CCE2A4E1B11E33E001E7D45 /* BSTPeriodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTPeriodType.h; sourceTree = "<group>"; };
 		4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTPeriodType.m; sourceTree = "<group>"; };
 		4CCE2A511B11E33F001E7D45 /* BSTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTUser.h; sourceTree = "<group>"; };
@@ -129,16 +171,14 @@
 		4CD8B8361B09EC1700C31508 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CD8B8371B09EC1700C31508 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4CD8B83A1B09EC1700C31508 /* BSTDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BSTDatabase.xcdatamodel; sourceTree = "<group>"; };
-		4CD8B83C1B09EC1700C31508 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Diploma/ViewController.h; sourceTree = SOURCE_ROOT; };
-		4CD8B83D1B09EC1700C31508 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Diploma/ViewController.m; sourceTree = SOURCE_ROOT; };
 		4CD8B8401B09EC1700C31508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CD8B8421B09EC1700C31508 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4CD8B8451B09EC1700C31508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4CD8B84B1B09EC1700C31508 /* DiplomaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiplomaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD8B8501B09EC1700C31508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD8B8511B09EC1700C31508 /* DiplomaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiplomaTests.m; sourceTree = "<group>"; };
-		4CD8B8621B0A1C9E00C31508 /* CanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
-		4CD8B8631B0A1C9E00C31508 /* CanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		4CD8B8621B0A1C9E00C31508 /* BSTPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTPathView.h; sourceTree = "<group>"; };
+		4CD8B8631B0A1C9E00C31508 /* BSTPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTPathView.m; sourceTree = "<group>"; };
 		4CDE71EC1B1598A400823DA8 /* BSTAimCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAimCell.h; sourceTree = "<group>"; };
 		4CDE71ED1B1598A400823DA8 /* BSTAimCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAimCell.m; sourceTree = "<group>"; };
 		4CDE71EF1B15ACFD00823DA8 /* BSTViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTViewModel.h; sourceTree = "<group>"; };
@@ -200,6 +240,32 @@
 				4CBE89B61B2179CC006D7ABC /* BSTServiceConstants.h */,
 			);
 			name = WebCore;
+			sourceTree = "<group>";
+		};
+		4CCA0E031B2828AC00E139F1 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				4CCA0E041B2828D000E139F1 /* BSTLoginViewController.h */,
+				4CCA0E051B2828D000E139F1 /* BSTLoginViewController.m */,
+				4CCA0E071B2828DF00E139F1 /* BSTRegistrationViewController.h */,
+				4CCA0E081B2828DF00E139F1 /* BSTRegistrationViewController.m */,
+				4CCA0E0A1B2828EF00E139F1 /* BSTResetPassViewController.h */,
+				4CCA0E0B1B2828EF00E139F1 /* BSTResetPassViewController.m */,
+			);
+			name = Authorization;
+			sourceTree = "<group>";
+		};
+		4CCA0E0D1B28291200E139F1 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				4CCA0E0E1B28293700E139F1 /* BSTLoginViewModel.h */,
+				4CCA0E0F1B28293700E139F1 /* BSTLoginViewModel.m */,
+				4CCA0E111B28294900E139F1 /* BSTRegistrationViewModel.h */,
+				4CCA0E121B28294900E139F1 /* BSTRegistrationViewModel.m */,
+				4CCA0E141B28295D00E139F1 /* BSTResetPassViewModel.h */,
+				4CCA0E151B28295D00E139F1 /* BSTResetPassViewModel.m */,
+			);
+			name = Authorization;
 			sourceTree = "<group>";
 		};
 		4CCE2A6C1B11E6A0001E7D45 /* Categories */ = {
@@ -338,6 +404,7 @@
 				4CCE2A711B11E963001E7D45 /* DataBase */,
 				4CCE2A701B11E94C001E7D45 /* UserDefaults */,
 				4CCE2A741B11EA60001E7D45 /* Macroses.h */,
+				4C19BE801B3037D9001B786C /* Constants.h */,
 				4CDE72011B1606B900823DA8 /* BSTSpline.h */,
 				4CDE72021B1606B900823DA8 /* BSTSpline.m */,
 			);
@@ -347,14 +414,13 @@
 		4CD8B8601B0A06E100C31508 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4CCA0E031B2828AC00E139F1 /* Authorization */,
 				4CDE71EB1B15985600823DA8 /* InheritedViews */,
 				4CD8AEFA1B130B740052BE82 /* BaseViewControllers */,
 				4CD8B8441B09EC1700C31508 /* LaunchScreen.xib */,
 				4CD8B83F1B09EC1700C31508 /* Main.storyboard */,
-				4CD8B83C1B09EC1700C31508 /* ViewController.h */,
-				4CD8B83D1B09EC1700C31508 /* ViewController.m */,
-				4CD8B8621B0A1C9E00C31508 /* CanvasView.h */,
-				4CD8B8631B0A1C9E00C31508 /* CanvasView.m */,
+				4C89D42C1B3012C400219FB1 /* BSTRootViewController.h */,
+				4C89D42D1B3012C400219FB1 /* BSTRootViewController.m */,
 				4CCE2A761B1202CD001E7D45 /* BSTRootTabBarController.h */,
 				4CCE2A771B1202CD001E7D45 /* BSTRootTabBarController.m */,
 				4CD8AEFB1B13123F0052BE82 /* BSTAimsViewController.h */,
@@ -367,6 +433,14 @@
 				4C8AA2C91B258C2C00ADCB83 /* BSTAddCategoryViewController.m */,
 				4C8AA2D41B25DDDE00ADCB83 /* BSTAimDescriptionViewController.h */,
 				4C8AA2D51B25DDDE00ADCB83 /* BSTAimDescriptionViewController.m */,
+				4CCA0DFA1B28282400E139F1 /* BSTStepViewController.h */,
+				4CCA0DFB1B28282400E139F1 /* BSTStepViewController.m */,
+				4CCA0DFD1B28284200E139F1 /* BSTAddStepViewController.h */,
+				4CCA0DFE1B28284200E139F1 /* BSTAddStepViewController.m */,
+				4CCA0E001B28286900E139F1 /* BSTUserProfileViewController.h */,
+				4CCA0E011B28286900E139F1 /* BSTUserProfileViewController.m */,
+				4CCC07891B28CD6200B8D8F9 /* BSTNotificationViewController.h */,
+				4CCC078A1B28CD6200B8D8F9 /* BSTNotificationViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,12 +448,17 @@
 		4CD8B8611B0A06F600C31508 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4CCA0E0D1B28291200E139F1 /* Authorization */,
 				4CDE71EF1B15ACFD00823DA8 /* BSTViewModel.h */,
 				4CDE71F01B15ACFD00823DA8 /* BSTViewModel.m */,
 				4CDE71F21B15AD5800823DA8 /* BSTAimViewModel.h */,
 				4CDE71F31B15AD5800823DA8 /* BSTAimViewModel.m */,
 				4C8AA2CB1B25BBB000ADCB83 /* BSTCategoryViewModel.h */,
 				4C8AA2CC1B25BBB000ADCB83 /* BSTCategoryViewModel.m */,
+				4CCA0DF41B2826E000E139F1 /* BSTStepViewModel.h */,
+				4CCA0DF51B2826E000E139F1 /* BSTStepViewModel.m */,
+				4CCA0DF71B2826F200E139F1 /* BSTUserProfileViewModel.h */,
+				4CCA0DF81B2826F200E139F1 /* BSTUserProfileViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -387,6 +466,8 @@
 		4CDE71EB1B15985600823DA8 /* InheritedViews */ = {
 			isa = PBXGroup;
 			children = (
+				4CD8B8621B0A1C9E00C31508 /* BSTPathView.h */,
+				4CD8B8631B0A1C9E00C31508 /* BSTPathView.m */,
 				4CDE71EC1B1598A400823DA8 /* BSTAimCell.h */,
 				4CDE71ED1B1598A400823DA8 /* BSTAimCell.m */,
 				4C8AA2CE1B25C32E00ADCB83 /* BSTCategoryCell.h */,
@@ -399,6 +480,8 @@
 				4CDE71FC1B15D84C00823DA8 /* BSTSegmentedControl.m */,
 				4CDE71FE1B15FDCA00823DA8 /* BSTProgressPie.h */,
 				4CDE71FF1B15FDCA00823DA8 /* BSTProgressPie.m */,
+				4CBF670D1B2EB9630096869D /* BSTStepCell.h */,
+				4CBF670E1B2EB9640096869D /* BSTStepCell.m */,
 			);
 			name = InheritedViews;
 			sourceTree = "<group>";
@@ -550,6 +633,9 @@
 				4CCE2A5F1B11E33F001E7D45 /* BSTStatistics.m in Sources */,
 				4CDE71FD1B15D84C00823DA8 /* BSTSegmentedControl.m in Sources */,
 				4C8AA2C71B258BD600ADCB83 /* BSTCategoriesViewController.m in Sources */,
+				4CCA0E101B28293700E139F1 /* BSTLoginViewModel.m in Sources */,
+				4CCC078B1B28CD6200B8D8F9 /* BSTNotificationViewController.m in Sources */,
+				4CCA0E061B2828D000E139F1 /* BSTLoginViewController.m in Sources */,
 				4CDE71F71B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m in Sources */,
 				4CDE71F11B15ACFD00823DA8 /* BSTViewModel.m in Sources */,
 				4CC9E24B1B2565E000E72074 /* BSTAim.m in Sources */,
@@ -557,8 +643,10 @@
 				4C9BCF0A1B2076F2009BCFB7 /* BSTSyncEngine.m in Sources */,
 				4CDE71F41B15AD5800823DA8 /* BSTAimViewModel.m in Sources */,
 				4CCE2A621B11E33F001E7D45 /* BSTAchievemnt.m in Sources */,
+				4CCA0E091B2828DF00E139F1 /* BSTRegistrationViewController.m in Sources */,
 				4CCE2A561B11E33F001E7D45 /* BSTStep.m in Sources */,
 				4CD8AEFD1B13123F0052BE82 /* BSTAimsViewController.m in Sources */,
+				4CCA0DF91B2826F200E139F1 /* BSTUserProfileViewModel.m in Sources */,
 				4CD8B8381B09EC1700C31508 /* AppDelegate.m in Sources */,
 				4C8AA2D61B25DDDE00ADCB83 /* BSTAimDescriptionViewController.m in Sources */,
 				4CD8AEF91B130B6D0052BE82 /* BSTBaseViewController.m in Sources */,
@@ -571,19 +659,27 @@
 				4C8AA2CD1B25BBB000ADCB83 /* BSTCategoryViewModel.m in Sources */,
 				4CD8B8351B09EC1700C31508 /* main.m in Sources */,
 				4C8AB0B61B175A4300680633 /* BSTParseAPIClient.m in Sources */,
+				4C89D42E1B3012C400219FB1 /* BSTRootViewController.m in Sources */,
 				4CCE2A681B11E340001E7D45 /* BSTReminder.m in Sources */,
+				4CCA0DFC1B28282400E139F1 /* BSTStepViewController.m in Sources */,
 				4CDE71FA1B15B4B300823DA8 /* BSTCategoryNameCell.m in Sources */,
-				4CD8B83E1B09EC1700C31508 /* ViewController.m in Sources */,
 				4CCE2A6F1B11E739001E7D45 /* MagicalRecord+Additions.m in Sources */,
 				4CDE71EE1B1598A400823DA8 /* BSTAimCell.m in Sources */,
 				4C8AA2D31B25D18B00ADCB83 /* BSTCategory.m in Sources */,
 				4CA8BA421B20D7770036E7BB /* BSTManagedObject.m in Sources */,
 				4CBEE67D1B187FB80035DC26 /* BSTWebCore.m in Sources */,
+				4CCA0E131B28294900E139F1 /* BSTRegistrationViewModel.m in Sources */,
+				4CCA0DFF1B28284200E139F1 /* BSTAddStepViewController.m in Sources */,
+				4CCA0E0C1B2828EF00E139F1 /* BSTResetPassViewController.m in Sources */,
 				4CBE89B91B21C76F006D7ABC /* BSTAddAimViewController.m in Sources */,
 				4CD8B83B1B09EC1700C31508 /* BSTDatabase.xcdatamodeld in Sources */,
+				4CCA0E021B28286900E139F1 /* BSTUserProfileViewController.m in Sources */,
+				4CCA0E161B28295D00E139F1 /* BSTResetPassViewModel.m in Sources */,
 				4C8AA2D01B25C32E00ADCB83 /* BSTCategoryCell.m in Sources */,
 				4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */,
-				4CD8B8641B0A1C9E00C31508 /* CanvasView.m in Sources */,
+				4CD8B8641B0A1C9E00C31508 /* BSTPathView.m in Sources */,
+				4CCA0DF61B2826E000E139F1 /* BSTStepViewModel.m in Sources */,
+				4CBF670F1B2EB9640096869D /* BSTStepCell.m in Sources */,
 				4CDE72031B1606B900823DA8 /* BSTSpline.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

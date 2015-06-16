@@ -18,4 +18,6 @@
 - (void)keyboardWillShow;
 - (void)keyboardWillHide;
 
+- (void)addAppTitle;
+
 @end

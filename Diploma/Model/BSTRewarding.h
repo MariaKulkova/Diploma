@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BSTManagedObject.h"
 
 @class BSTAchievemnt, BSTUser;
 
-@interface BSTRewarding : NSManagedObject
+@interface BSTRewarding : BSTManagedObject
 
 @property (nonatomic, retain) BSTAchievemnt *achievement;
 @property (nonatomic, retain) BSTUser       *owner;

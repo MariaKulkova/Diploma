@@ -3,14 +3,15 @@
 //  Copyright (c) 2015 Maria. All rights reserved.
 //
 
-#import "CanvasView.h"
+#import "BSTPathView.h"
 #import "BSTSpline.h"
+#import "Constants.h"
 
-@interface CanvasView ()
+@interface BSTPathView ()
 
 @end
 
-@implementation CanvasView
+@implementation BSTPathView
 
 - (void)awakeFromNib {
 }
@@ -38,16 +39,16 @@
 	range.length   = interpolatedPoints.count - currentStepIndex;
 	NSArray *futurePath = [interpolatedPoints subarrayWithRange:range];
 	
-	[self drawPath:completedPath withColor:[UIColor colorWithRed:150.0/255.0 green:70.0/255.0 blue:255.0/255.0 alpha:1.0] withThickness:2.0 inRect:rect];
+	[self drawPath:completedPath withColor:BaseRedColor withThickness:2.0 inRect:rect];
 	
 	CGFloat dashes[] = {10,10};
 	CGContextSetLineDash(context, 0.0, dashes, 2);
 	CGContextSetLineWidth(context, 1.0);
-	[self drawPath:futurePath withColor:[UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1] withThickness:2.0 inRect:rect];
+	[self drawPath:futurePath withColor:NeutralColor withThickness:2.0 inRect:rect];
 
 	for (NSInteger i = 0; i <= self.achievedAimsCount + 1; i++) {
 		CGPoint point = [[stations objectAtIndex:i] CGPointValue];
-		CGContextSetFillColorWithColor(context,[UIColor colorWithRed:150.0/255.0 green:70.0/255.0 blue:255.0/255.0 alpha:1.0].CGColor);
+		CGContextSetFillColorWithColor(context, BaseRedColor.CGColor);
 		CGRect rectangle = CGRectMake(point.y - 3, rect.size.height - point.x - 3, 6, 6);
 		CGContextAddEllipseInRect(context, rectangle);
 		CGContextFillPath(context);
@@ -55,7 +56,7 @@
 	
 	for (NSInteger i = self.achievedAimsCount + 2; i < stations.count; i++) {
 		CGPoint point = [[stations objectAtIndex:i] CGPointValue];
-		CGContextSetFillColorWithColor(context,[UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1].CGColor);
+		CGContextSetFillColorWithColor(context,NeutralColor.CGColor);
 		CGRect rectangle = CGRectMake(point.y - 3, rect.size.height - point.x - 3, 6, 6);
 		CGContextAddEllipseInRect(context, rectangle);
 		CGContextFillPath(context);

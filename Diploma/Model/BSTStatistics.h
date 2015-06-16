@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BSTManagedObject.h"
 
 @class BSTAim;
 
-@interface BSTStatistics : NSManagedObject
+@interface BSTStatistics : BSTManagedObject
 
 @property (nonatomic)         int64_t trackedTime;
 

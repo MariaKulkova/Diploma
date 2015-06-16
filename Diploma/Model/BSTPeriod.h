@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BSTManagedObject.h"
 
 @class BSTPeriodType, BSTReminder;
 
-@interface BSTPeriod : NSManagedObject
+@interface BSTPeriod : BSTManagedObject
 
 @property (nonatomic)         int64_t        periodValue;
 @property (nonatomic, retain) BSTPeriodType *type;

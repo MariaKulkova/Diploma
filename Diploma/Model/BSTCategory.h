@@ -14,9 +14,10 @@
 
 @interface BSTCategory : BSTManagedObject
 
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSSet *aims;
-@property (nonatomic, retain) BSTUser *owner;
+@property (nonatomic, retain) NSString *id;
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSSet    *aims;
+@property (nonatomic, retain) BSTUser  *owner;
 @end
 
 @interface BSTCategory (CoreDataGeneratedAccessors)

@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[super addAppTitle];
     // Do any additional setup after loading the view.
 }
 

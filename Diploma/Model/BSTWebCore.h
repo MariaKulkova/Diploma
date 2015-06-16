@@ -12,6 +12,7 @@
 @interface BSTWebCore : NSObject
 
 @property (nonatomic, strong, readonly) NSURLSession *parseSession;
+@property (nonatomic, strong, readonly) NSURLSession *authorizedSession;
 
 @property (nonatomic, strong, readonly) RACSignal *isAuthorized;
 

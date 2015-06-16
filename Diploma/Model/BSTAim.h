@@ -14,10 +14,11 @@
 
 @interface BSTAim : BSTManagedObject
 
-@property (nonatomic) BOOL    completed;
-@property (nonatomic) int64_t stepsCount;
-@property (nonatomic) int64_t stepsCompleted;
-@property (nonatomic, retain) NSString *title;
+@property (nonatomic) NSString *id;
+@property (nonatomic) BOOL      completed;
+@property (nonatomic) int64_t   stepsCount;
+@property (nonatomic) int64_t   stepsCompleted;
+@property (nonatomic, retain)   NSString *title;
 
 @property (nonatomic, retain) BSTCategory *category;
 @property (nonatomic, retain) NSSet       *steps;

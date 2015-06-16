@@ -73,6 +73,11 @@
 												  object:nil];
 }
 
+- (void)addAppTitle{
+	UIImageView *logoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BoostTitle"]];
+	self.navigationItem.titleView = logoImage;
+}
+
 #pragma mark - Custom
 
 - (void)addKeyboardHidingGesture {

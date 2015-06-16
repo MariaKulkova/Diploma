@@ -14,7 +14,8 @@
 
 @interface BSTStep : BSTManagedObject
 
-@property (nonatomic)         BOOL     achieved;
+@property (nonatomic, retain) NSString *id;
+@property (nonatomic)         BOOL      achieved;
 @property (nonatomic, retain) NSDate   *deadline;
 @property (nonatomic, retain) NSString *title;
 

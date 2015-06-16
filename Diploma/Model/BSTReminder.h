@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BSTManagedObject.h"
 
 @class BSTPeriod, BSTStep;
 
-@interface BSTReminder : NSManagedObject
+@interface BSTReminder : BSTManagedObject
 
 @property (nonatomic, retain) NSDate    *date;
 @property (nonatomic)         BOOL      activated;

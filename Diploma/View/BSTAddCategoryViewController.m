@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self addKeyboardHidingGesture];
+	[super addAppTitle];
     // Do any additional setup after loading the view.
 }
 

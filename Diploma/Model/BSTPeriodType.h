@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BSTManagedObject.h"
 
-
-@interface BSTPeriodType : NSManagedObject
+@interface BSTPeriodType : BSTManagedObject
 
 @property (nonatomic, retain) NSString *type;
 @property (nonatomic, retain) NSSet    *periods;

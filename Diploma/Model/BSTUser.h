@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "BSTManagedObject.h"
 
 @class BSTCategory, BSTRewarding;
 
-@interface BSTUser : NSManagedObject
+@interface BSTUser : BSTManagedObject
 
 @property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSString * username;

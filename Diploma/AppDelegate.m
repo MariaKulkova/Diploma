@@ -28,10 +28,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[self setupEnvironment];
 	
-//	BSTCategory *cat = [BSTCategory MR_createEntity];
-//	cat.title = @"work";
-//	
-//	[[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
+	[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavBarBackground"] forBarMetrics:UIBarMetricsDefault];
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 	
 	return YES;
 }
