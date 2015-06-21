@@ -7,7 +7,22 @@
 //
 
 #import "BSTViewModel.h"
+#import "MagicalRecord+Additions.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "BSTAim.h"
 
 @interface BSTStepViewModel : BSTViewModel
+
+@property (nonatomic, strong) NSManagedObjectContext *context;
+
+@property (nonatomic, strong, readonly) NSArray *steps;
+
+@property (nonatomic, strong) BSTAim *selectedAim;
+
+- (void)saveChanges;
+- (void)rollbackChanges;
+- (void)updateData;
+- (void)deleteStep:(BSTStep *)step;
+- (void)completeStep: (BSTStep *)step;
 
 @end

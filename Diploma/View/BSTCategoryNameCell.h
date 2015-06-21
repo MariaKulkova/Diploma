@@ -13,5 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (nonatomic, strong) BSTCategory *dbEntity;
+@property (nonatomic, assign) BOOL active;
+
++ (CGFloat)widthForDBEntity:(BSTCategory *)dbEntity;
 
 @end

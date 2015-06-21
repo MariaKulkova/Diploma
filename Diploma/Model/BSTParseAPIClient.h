@@ -5,11 +5,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NSURLSession+RACSupport.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "BSTManagedObject.h"
 
 @interface BSTParseAPIClient : NSObject
 
-- (RACSignal *)addObject:(BSTManagedObject *) object;
++ (RACSignal *)addObject:(BSTManagedObject *) object;
 
 @end

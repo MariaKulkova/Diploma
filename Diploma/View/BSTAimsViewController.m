@@ -10,18 +10,22 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "BSTCollectionViewCategoriesLayout.h"
 #import "BSTCategoryNameCell.h"
+#import "BSTAddAimViewController.h"
+#import "BSTStepViewController.h"
+#import <AKPickerView/AKPickerView.h>
 
 #define INFINITE_OFFSET_MULTIPLIER .8
 #define INFINITE_COUNT_MULTIPLIER  3
 
-@interface BSTAimsViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
+@interface BSTAimsViewController () <UITableViewDelegate, UITableViewDataSource, AKPickerViewDelegate, AKPickerViewDataSource, UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UICollectionView *catalogsCollectionView;
+@property (weak, nonatomic) IBOutlet UIView *categoriesPanel;
 @property (weak, nonatomic) IBOutlet UITableView      *tableView;
 
 @property (nonatomic, assign) BOOL infiniteScrollActive;
 
 @property (nonatomic, strong) BSTAimViewModel *viewModel;
+@property (nonatomic, strong) AKPickerView    *pickerView;
 
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) NSArray *categories;
@@ -35,12 +39,23 @@
 	[super addAppTitle];
 	self.infiniteScrollActive = YES;
 	
+	self.pickerView = [[AKPickerView alloc] initWithFrame:CGRectMake(0, 0, self.categoriesPanel.frame.size.width, self.categoriesPanel.frame.size.height)];
+	self.pickerView.delegate = self;
+	self.pickerView.dataSource = self;
+	self.pickerView.interitemSpacing = 10;
+	[self.categoriesPanel addSubview:self.pickerView];
+	
 	[self bindModel];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.viewModel updateData];
+}
+
 - (void)dealloc {
-	self.catalogsCollectionView.delegate = nil;
-	self.catalogsCollectionView.dataSource = nil;
+	self.pickerView.delegate = nil;
+	self.pickerView.dataSource = nil;
 	self.tableView.delegate = nil;
 	self.tableView.dataSource = nil;
 }
@@ -53,8 +68,47 @@
 	return RACObserve(self.viewModel, categories);
 }
 
-#pragma mark - <UIScrollViewDelegate>
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"AddAimSegue"]) {
+		BSTAddAimViewController *viewController = segue.destinationViewController;
+		if ([sender isKindOfClass:[UIBarButtonItem class]] ) {
+			viewController.selectedAim = nil;
+		}
+		else if ([sender isKindOfClass:[BSTAimCell class]]) {
+			BSTAimCell *cell = (BSTAimCell *)sender;
+			viewController.selectedAim = cell.dbEntity;
+		}
+	}
+	else if ([segue.identifier isEqualToString:@"PerformStepsSegue"]){
+		BSTStepViewController *viewController = segue.destinationViewController;
+		BSTAimCell *cell = (BSTAimCell *)sender;
+		viewController.selectedAim = cell.dbEntity;
+	}
+}
 
+- (IBAction)longCellPress:(UILongPressGestureRecognizer *)sender {
+	CGPoint position = [sender locationInView:self.tableView];
+	NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:position];
+	[self performSegueWithIdentifier:@"AddAimSegue" sender:[self.tableView cellForRowAtIndexPath:indexPath]];
+}
+
+
+#pragma mark - PikerViewDelegate
+
+- (NSUInteger)numberOfItemsInPickerView:(AKPickerView *)pickerView {
+	return self.categories.count;
+}
+
+- (NSString *)pickerView:(AKPickerView *)pickerView titleForItem:(NSInteger)item {
+	BSTCategory *element = (BSTCategory *)self.categories[item];
+	return element.title;
+}
+
+- (void)pickerView:(AKPickerView *)pickerView didSelectItem:(NSInteger)item {
+	self.viewModel.selectedCategory = self.categories[item];
+}
+
+#pragma mark - Bingings
 
 - (void)bindModel{
 	self.viewModel = [BSTAimViewModel new];
@@ -69,83 +123,34 @@
 	[[[self.collectionItemsObserver replayLast] deliverOnMainThread] subscribeNext:^(NSArray *items) {
 		@strongify(self);
 		self.categories = items;
-		[self.catalogsCollectionView reloadData];
+		[self.pickerView reloadData];
 	}];
-}
-- (IBAction)addEntity:(id)sender {
-	NSMutableDictionary *aimInfo = [[NSMutableDictionary alloc] init];
-	[aimInfo setValue:@"test" forKey:@"title"];
-	[self.viewModel addAim:aimInfo intoCategory:nil];
 }
 
 #pragma mark - UITableViewDataSource / UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	//return self.items.count;
-	return 10;
+	return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSString * const reuseId = ClassReuseID(BSTAimCell);
 	
 	BSTAimCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
-	//cell.dbEntity = self.items[indexPath.row];
+	cell.dbEntity = self.items[indexPath.row];
 	
 	return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-	// Return YES if you want the specified item to be editable.
 	return YES;
 }
 
-// Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
-		//add code here for when you hit delete
-		// TODO: delete cell
+		BSTAimCell *deletedCell = (BSTAimCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+		[self.viewModel deleteAim:deletedCell.dbEntity];
 	}
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-	if (scrollView == self.catalogsCollectionView && self.infiniteScrollActive) {
-		CGFloat const contentWidth = scrollView.contentSize.width / INFINITE_COUNT_MULTIPLIER;
-		CGFloat const leftBorder   = contentWidth * (1. - INFINITE_OFFSET_MULTIPLIER);
-		CGFloat const rightBorder  = contentWidth * (1. + INFINITE_OFFSET_MULTIPLIER);
-		CGPoint const offset       = scrollView.contentOffset;
-		
-		if (offset.x < leftBorder) {
-			// Jump to the left
-			scrollView.contentOffset = (CGPoint){contentWidth + leftBorder, offset.y};
-		}
-		else if (offset.x > rightBorder) {
-			// Jump to the right
-			scrollView.contentOffset = (CGPoint){rightBorder - contentWidth, offset.y};
-		}
-	}
-}
-
-#pragma mark - UICollectionViewDataSource / UICollectionViewDelegate
-
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//	return CGSizeMake([FWGenreNameCell widthForDBEntity:[self sectionAtIndexPath:indexPath]], collectionViewLayout.itemSize.height - .1);
-//}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-	//return self.categories.count * (self.infiniteScrollActive ? INFINITE_COUNT_MULTIPLIER : 1);
-	return 10 * (self.infiniteScrollActive ? INFINITE_COUNT_MULTIPLIER : 1);
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-	NSString * const reuseId = ClassReuseID(BSTCategoryNameCell);
-	
-	BSTCategoryNameCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseId forIndexPath:indexPath];
-	cell.label.text = @"Item";
-	
-	return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 @end

@@ -37,4 +37,6 @@
 - (void)addTimeStatistics:(NSSet *)values;
 - (void)removeTimeStatistics:(NSSet *)values;
 
+- (NSInteger)getCompletedStepsCount;
+
 @end

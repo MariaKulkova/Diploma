@@ -10,6 +10,7 @@
 #import "BSTViewModel.h"
 #import "MagicalRecord+Additions.h"
 #import "BSTCategory.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface BSTAimViewModel : BSTViewModel
 
@@ -22,6 +23,7 @@
 
 - (void)saveChanges;
 - (void)rollbackChanges;
-- (void)addAim:(NSDictionary *)aimInfo intoCategory:(id)dbEntity;
+- (void)updateData;
+- (void)deleteAim:(BSTAim *)aim;
 
 @end

@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIView             *swipableContentView;
 @property (weak, nonatomic) IBOutlet UIButton           *deleteButton;
 @property (weak, nonatomic) IBOutlet UIButton           *completeButton;
+@property (weak, nonatomic) IBOutlet UILabel            *stepTitle;
+@property (weak, nonatomic) IBOutlet UILabel            *deadlineLabel;
+@property (weak, nonatomic) IBOutlet UIView             *completeLine;
 
 /** Custom properties **/
 @property (nonatomic, strong) UIPanGestureRecognizer *panRecognizer;
@@ -40,6 +43,25 @@
 - (void)prepareForReuse {
 	[super prepareForReuse];
 	[self setConstraintsToOffset:0 animated:NO];
+}
+
+#pragma mark = CustomProperties
+
+- (void)setCompleted:(BOOL)completed {
+	if (completed) {
+		self.completeLine.hidden = NO;
+	}
+	else {
+		self.completeLine.hidden = YES;
+	}
+}
+
+#pragma mark Content
+
+- (void)setDbEntity:(BSTStep *)step {
+	_dbEntity = step;
+	self.stepTitle.text = step.title;
+	self.completed = step.achieved;
 }
 
 #pragma mark - GestureRecognizerDelegate

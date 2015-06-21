@@ -10,6 +10,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "Macroses.h"
 #import "BSTAim.h"
+#import "BSTStep.h"
 
 @interface BSTAimViewModel ()
 
@@ -23,28 +24,19 @@
 #pragma mark Init
 
 - (void)initialize {
-	self.context = [[NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]] listenChangesFromParentContext];
+	self.context = [NSManagedObjectContext MR_defaultContext];
+//	self.context = [[NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]] listenChangesFromParentContext];
 	self.context.MR_workingName = NSStringFromClass([self class]);
 	
-	self.aims = [BSTAim MR_findAllSortedBy:Key(BSTAim, title) ascending:YES inContext:self.context.parentContext];
-	
+	[self updateData];
+	if (self.categories.count != 0) {
+		self.selectedCategory = self.categories[0];
+	}
+
 	@weakify(self);
-	
-	[RACObserve(self, categories) subscribeNext:^(NSSet *set) {
-		@strongify(self);
-		if (set != nil) {
-			self.categories = [set sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:Key(BSTCategory, title) ascending:YES]]];
-			
-			if (self.selectedCategory == nil || ![self.categories containsObject:self.selectedCategory]) {
-				self.selectedCategory = [self.categories firstObject];
-			}
-		}
-	}];
-	
 	[RACObserve(self, selectedCategory) subscribeNext:^(BSTCategory *category) {
 		@strongify(self);
-		self.aims = [BSTAim MR_findAllSortedBy:Key(BSTAim, title) ascending:YES inContext:self.context.parentContext];
-//		self.aims = [category.aims sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:Key(BSTAim, title) ascending:YES]]];
+		self.aims = [category.aims sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:Key(BSTAim, title) ascending:YES]]];
 	}];
 }
 
@@ -59,11 +51,19 @@
 	[self.context rollback];
 }
 
-- (void)addAim:(NSDictionary *)aimInfo intoCategory:(id)dbEntity {
-	BSTAim *aim = [BSTAim MR_createInContext:self.context];
-	[aim fillWithUserInfo:aimInfo];
+- (void)updateData {
+	self.aims = [self.selectedCategory.aims sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:Key(BSTAim, title) ascending:YES]]];
+	self.categories = [BSTCategory MR_findAllSortedBy:Key(BSTCategory, title) ascending:YES inContext:self.context];
+}
+
+- (void)deleteAim:(BSTAim *)aim {
+	[aim.category removeAimsObject:aim];
+	for (BSTStep *step in aim.steps) {
+		[step MR_deleteEntity];
+	}
+	[aim MR_deleteEntity];
 	[self saveChanges];
-	self.aims = [BSTAim MR_findAllSortedBy:Key(BSTAim, title) ascending:YES inContext:self.context.parentContext];
+	[self updateData];
 }
 
 @end

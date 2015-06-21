@@ -26,6 +26,13 @@
 - (void)setDbEntity:(BSTAim *)aim {
 	_dbEntity = aim;
 	self.aimTextField.text = aim.title;
+	NSInteger percentage = [aim getCompletedStepsCount];
+	if (aim.steps.count != 0) {
+		percentage = 100 * percentage / aim.steps.count;
+	}
+	self.progressImage.percentage = percentage;
+	[self.progressImage setNeedsDisplay];
+	self.progressLabel.text = [NSString stringWithFormat:@"%d%%", percentage];
 }
 
 @end

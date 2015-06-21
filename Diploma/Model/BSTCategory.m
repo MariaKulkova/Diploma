@@ -22,7 +22,9 @@
 - (void)fillWithUserInfo:(NSDictionary *)info {
 	self.id    = info[@"objectId"];
 	self.title = info[@"title"];
-	self.owner = [BSTUser MR_findFirstByAttribute:Key(BSTUser, id) withValue:info[@"owner"] inContext:self.managedObjectContext];
+	if (info[@"owner"]) {
+		self.owner = [BSTUser MR_findFirstByAttribute:Key(BSTUser, id) withValue:info[@"owner"] inContext:self.managedObjectContext];
+	}
 	
 //	NSMutableSet *deprecated = [self.aims mutableCopy];
 //	for (NSDictionary *aimInfo in info[@"aims_id"]) {
@@ -40,6 +42,10 @@
 	NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
 	[dictionary setValue:self.title forKey:@"title"];
 	return dictionary;
+}
+
++ (NSString *)className {
+	return @"Category";
 }
 
 @end

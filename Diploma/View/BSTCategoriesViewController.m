@@ -35,6 +35,11 @@
 	[self bindModel];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.viewModel updateData];
+}
+
 - (void)bindModel {
 	self.viewModel = [BSTCategoryViewModel new];
 	
@@ -56,45 +61,48 @@
 	return RACObserve(self.viewModel, categories);
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"AddCategorySegue"]) {
+		BSTAddCategoryViewController *viewController = segue.destinationViewController;
+		if ([sender isKindOfClass:[UIBarButtonItem class]] ) {
+			viewController.selectedCategory = nil;
+		}
+		else if ([sender isKindOfClass:[BSTCategoryCell class]]) {
+			BSTCategoryCell *cell = (BSTCategoryCell *)sender;
+			viewController.selectedCategory = cell.dbEntity;
+		}
+	}
+}
+
+- (IBAction)longCellPress:(UILongPressGestureRecognizer *)sender {
+	CGPoint position = [sender locationInView:self.tableView];
+	NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:position];
+	[self performSegueWithIdentifier:@"AddCategorySegue" sender:[self.tableView cellForRowAtIndexPath:indexPath]];
+}
+
 #pragma mark - UITableViewDataSource / UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	//return self.items.count;
-	return 10;
+	return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSString * const reuseId = ClassReuseID(BSTCategoryCell);
 	
 	BSTCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
-	//cell.dbEntity = self.items[indexPath.row];
+	cell.dbEntity = self.items[indexPath.row];
 	
 	return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-	// Return YES if you want the specified item to be editable.
 	return YES;
 }
 
-// Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
-		//add code here for when you hit delete
-		// TODO: delete cell
-	}
-}
-
-#pragma mark - Segues
-
-- (IBAction)unwindFromModalViewController:(UIStoryboardSegue *)segue {
-	if ([segue.sourceViewController isKindOfClass:[BSTAddCategoryViewController class]]) {
-		BSTAddCategoryViewController *addCategoryViewConroller = segue.sourceViewController;
-		if (addCategoryViewConroller.categoryTitle) {
-			NSMutableDictionary *categoryInfo = [[NSMutableDictionary alloc] init];
-			[categoryInfo setObject:addCategoryViewConroller.categoryTitle forKey:@"title"];
-			[self.viewModel addCategory:categoryInfo];
-		}
+		BSTCategoryCell *deletedCell = (BSTCategoryCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+		[self.viewModel deleteCategory:deletedCell.dbEntity];
 	}
 }
 

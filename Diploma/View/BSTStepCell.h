@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSTStep.h"
 
 @class BSTStepCell;
 
@@ -19,6 +20,9 @@
 
 /** Delegate **/
 @property (nonatomic, weak) id <SwipeableCellDelegate> delegate;
+
+@property (nonatomic, strong) BSTStep *dbEntity;
+@property (nonatomic, assign) BOOL    completed;
 
 @end
 

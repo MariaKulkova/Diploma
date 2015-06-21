@@ -22,6 +22,7 @@
 		4CBE89B91B21C76F006D7ABC /* BSTAddAimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE89B81B21C76F006D7ABC /* BSTAddAimViewController.m */; };
 		4CBEE67D1B187FB80035DC26 /* BSTWebCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEE67C1B187FB80035DC26 /* BSTWebCore.m */; };
 		4CBF670F1B2EB9640096869D /* BSTStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF670E1B2EB9640096869D /* BSTStepCell.m */; };
+		4CC142891B370BC400BA08C0 /* BSTChangeStepViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC142881B370BC400BA08C0 /* BSTChangeStepViewModel.m */; };
 		4CC9E24B1B2565E000E72074 /* BSTAim.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9E24A1B2565E000E72074 /* BSTAim.m */; };
 		4CCA0DF61B2826E000E139F1 /* BSTStepViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0DF51B2826E000E139F1 /* BSTStepViewModel.m */; };
 		4CCA0DF91B2826F200E139F1 /* BSTUserProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0DF81B2826F200E139F1 /* BSTUserProfileViewModel.m */; };
@@ -34,6 +35,8 @@
 		4CCA0E101B28293700E139F1 /* BSTLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0E0F1B28293700E139F1 /* BSTLoginViewModel.m */; };
 		4CCA0E131B28294900E139F1 /* BSTRegistrationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0E121B28294900E139F1 /* BSTRegistrationViewModel.m */; };
 		4CCA0E161B28295D00E139F1 /* BSTResetPassViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0E151B28295D00E139F1 /* BSTResetPassViewModel.m */; };
+		4CCB6FB91B358640000BFE48 /* BSTChangeCategoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB6FB81B358640000BFE48 /* BSTChangeCategoryViewModel.m */; };
+		4CCB6FBC1B35C13C000BFE48 /* BSTProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB6FBB1B35C13C000BFE48 /* BSTProgressViewController.m */; };
 		4CCC078B1B28CD6200B8D8F9 /* BSTNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC078A1B28CD6200B8D8F9 /* BSTNotificationViewController.m */; };
 		4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */; };
 		4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A521B11E33F001E7D45 /* BSTUser.m */; };
@@ -45,6 +48,7 @@
 		4CCE2A681B11E340001E7D45 /* BSTReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A671B11E340001E7D45 /* BSTReminder.m */; };
 		4CCE2A6F1B11E739001E7D45 /* MagicalRecord+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A6E1B11E739001E7D45 /* MagicalRecord+Additions.m */; };
 		4CCE2A781B1202CD001E7D45 /* BSTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A771B1202CD001E7D45 /* BSTRootTabBarController.m */; };
+		4CD5CC5C1B33F7100009427E /* BSTChangeAimViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5CC5B1B33F7100009427E /* BSTChangeAimViewModel.m */; };
 		4CD8AEF91B130B6D0052BE82 /* BSTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AEF81B130B6D0052BE82 /* BSTBaseViewController.m */; };
 		4CD8AEFD1B13123F0052BE82 /* BSTAimsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AEFC1B13123F0052BE82 /* BSTAimsViewController.m */; };
 		4CD8B8351B09EC1700C31508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8B8341B09EC1700C31508 /* main.m */; };
@@ -111,6 +115,8 @@
 		4CBEE67C1B187FB80035DC26 /* BSTWebCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTWebCore.m; sourceTree = "<group>"; };
 		4CBF670D1B2EB9630096869D /* BSTStepCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStepCell.h; sourceTree = "<group>"; };
 		4CBF670E1B2EB9640096869D /* BSTStepCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTStepCell.m; sourceTree = "<group>"; };
+		4CC142871B370BC400BA08C0 /* BSTChangeStepViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTChangeStepViewModel.h; sourceTree = "<group>"; };
+		4CC142881B370BC400BA08C0 /* BSTChangeStepViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTChangeStepViewModel.m; sourceTree = "<group>"; };
 		4CC9E2491B2565E000E72074 /* BSTAim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAim.h; sourceTree = "<group>"; };
 		4CC9E24A1B2565E000E72074 /* BSTAim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAim.m; sourceTree = "<group>"; };
 		4CCA0DF41B2826E000E139F1 /* BSTStepViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStepViewModel.h; sourceTree = "<group>"; };
@@ -135,6 +141,10 @@
 		4CCA0E121B28294900E139F1 /* BSTRegistrationViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTRegistrationViewModel.m; sourceTree = "<group>"; };
 		4CCA0E141B28295D00E139F1 /* BSTResetPassViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTResetPassViewModel.h; sourceTree = "<group>"; };
 		4CCA0E151B28295D00E139F1 /* BSTResetPassViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTResetPassViewModel.m; sourceTree = "<group>"; };
+		4CCB6FB71B358640000BFE48 /* BSTChangeCategoryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTChangeCategoryViewModel.h; sourceTree = "<group>"; };
+		4CCB6FB81B358640000BFE48 /* BSTChangeCategoryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTChangeCategoryViewModel.m; sourceTree = "<group>"; };
+		4CCB6FBA1B35C13C000BFE48 /* BSTProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTProgressViewController.h; sourceTree = "<group>"; };
+		4CCB6FBB1B35C13C000BFE48 /* BSTProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTProgressViewController.m; sourceTree = "<group>"; };
 		4CCC07891B28CD6200B8D8F9 /* BSTNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTNotificationViewController.h; sourceTree = "<group>"; };
 		4CCC078A1B28CD6200B8D8F9 /* BSTNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTNotificationViewController.m; sourceTree = "<group>"; };
 		4CCE2A4E1B11E33E001E7D45 /* BSTPeriodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTPeriodType.h; sourceTree = "<group>"; };
@@ -161,6 +171,8 @@
 		4CCE2A751B11FF5F001E7D45 /* BSTSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSTSettings.h; sourceTree = "<group>"; };
 		4CCE2A761B1202CD001E7D45 /* BSTRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTRootTabBarController.h; sourceTree = "<group>"; };
 		4CCE2A771B1202CD001E7D45 /* BSTRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTRootTabBarController.m; sourceTree = "<group>"; };
+		4CD5CC5A1B33F7100009427E /* BSTChangeAimViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTChangeAimViewModel.h; sourceTree = "<group>"; };
+		4CD5CC5B1B33F7100009427E /* BSTChangeAimViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTChangeAimViewModel.m; sourceTree = "<group>"; };
 		4CD8AEF71B130B6D0052BE82 /* BSTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTBaseViewController.h; sourceTree = "<group>"; };
 		4CD8AEF81B130B6D0052BE82 /* BSTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTBaseViewController.m; sourceTree = "<group>"; };
 		4CD8AEFB1B13123F0052BE82 /* BSTAimsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAimsViewController.h; sourceTree = "<group>"; };
@@ -435,6 +447,8 @@
 				4C8AA2D51B25DDDE00ADCB83 /* BSTAimDescriptionViewController.m */,
 				4CCA0DFA1B28282400E139F1 /* BSTStepViewController.h */,
 				4CCA0DFB1B28282400E139F1 /* BSTStepViewController.m */,
+				4CCB6FBA1B35C13C000BFE48 /* BSTProgressViewController.h */,
+				4CCB6FBB1B35C13C000BFE48 /* BSTProgressViewController.m */,
 				4CCA0DFD1B28284200E139F1 /* BSTAddStepViewController.h */,
 				4CCA0DFE1B28284200E139F1 /* BSTAddStepViewController.m */,
 				4CCA0E001B28286900E139F1 /* BSTUserProfileViewController.h */,
@@ -453,10 +467,16 @@
 				4CDE71F01B15ACFD00823DA8 /* BSTViewModel.m */,
 				4CDE71F21B15AD5800823DA8 /* BSTAimViewModel.h */,
 				4CDE71F31B15AD5800823DA8 /* BSTAimViewModel.m */,
+				4CD5CC5A1B33F7100009427E /* BSTChangeAimViewModel.h */,
+				4CD5CC5B1B33F7100009427E /* BSTChangeAimViewModel.m */,
 				4C8AA2CB1B25BBB000ADCB83 /* BSTCategoryViewModel.h */,
 				4C8AA2CC1B25BBB000ADCB83 /* BSTCategoryViewModel.m */,
+				4CCB6FB71B358640000BFE48 /* BSTChangeCategoryViewModel.h */,
+				4CCB6FB81B358640000BFE48 /* BSTChangeCategoryViewModel.m */,
 				4CCA0DF41B2826E000E139F1 /* BSTStepViewModel.h */,
 				4CCA0DF51B2826E000E139F1 /* BSTStepViewModel.m */,
+				4CC142871B370BC400BA08C0 /* BSTChangeStepViewModel.h */,
+				4CC142881B370BC400BA08C0 /* BSTChangeStepViewModel.m */,
 				4CCA0DF71B2826F200E139F1 /* BSTUserProfileViewModel.h */,
 				4CCA0DF81B2826F200E139F1 /* BSTUserProfileViewModel.m */,
 			);
@@ -629,7 +649,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CCB6FB91B358640000BFE48 /* BSTChangeCategoryViewModel.m in Sources */,
 				4CCE2A781B1202CD001E7D45 /* BSTRootTabBarController.m in Sources */,
+				4CC142891B370BC400BA08C0 /* BSTChangeStepViewModel.m in Sources */,
 				4CCE2A5F1B11E33F001E7D45 /* BSTStatistics.m in Sources */,
 				4CDE71FD1B15D84C00823DA8 /* BSTSegmentedControl.m in Sources */,
 				4C8AA2C71B258BD600ADCB83 /* BSTCategoriesViewController.m in Sources */,
@@ -638,6 +660,7 @@
 				4CCA0E061B2828D000E139F1 /* BSTLoginViewController.m in Sources */,
 				4CDE71F71B15B23100823DA8 /* BSTCollectionViewCategoriesLayout.m in Sources */,
 				4CDE71F11B15ACFD00823DA8 /* BSTViewModel.m in Sources */,
+				4CD5CC5C1B33F7100009427E /* BSTChangeAimViewModel.m in Sources */,
 				4CC9E24B1B2565E000E72074 /* BSTAim.m in Sources */,
 				4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */,
 				4C9BCF0A1B2076F2009BCFB7 /* BSTSyncEngine.m in Sources */,
@@ -660,6 +683,7 @@
 				4CD8B8351B09EC1700C31508 /* main.m in Sources */,
 				4C8AB0B61B175A4300680633 /* BSTParseAPIClient.m in Sources */,
 				4C89D42E1B3012C400219FB1 /* BSTRootViewController.m in Sources */,
+				4CCB6FBC1B35C13C000BFE48 /* BSTProgressViewController.m in Sources */,
 				4CCE2A681B11E340001E7D45 /* BSTReminder.m in Sources */,
 				4CCA0DFC1B28282400E139F1 /* BSTStepViewController.m in Sources */,
 				4CDE71FA1B15B4B300823DA8 /* BSTCategoryNameCell.m in Sources */,

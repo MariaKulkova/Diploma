@@ -12,4 +12,6 @@
 
 + (NSURL *)constructURL:(NSString *)path;
 
++ (NSURL *)serviceURL:(NSString *)parameters, ... NS_REQUIRES_NIL_TERMINATION;
+
 @end

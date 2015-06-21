@@ -7,7 +7,10 @@
 //
 
 #import "BSTBaseViewController.h"
+#import "BSTAim.h"
 
 @interface BSTStepViewController : BSTBaseViewController
+
+@property (strong, nonatomic) BSTAim *selectedAim;
 
 @end

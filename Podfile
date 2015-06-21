@@ -10,6 +10,7 @@ pod 'MagicalRecord'
 
 # Other libraries
 pod 'ReactiveCocoa', '~> 2.4.4'
+pod 'AKPickerView'
 
 ###
 # Per target pods

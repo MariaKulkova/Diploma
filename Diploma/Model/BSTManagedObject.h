@@ -12,6 +12,7 @@
 @interface BSTManagedObject : NSManagedObject
 
 - (NSDictionary *)representInfo;
++ (NSString *)className;
 
 @end
 

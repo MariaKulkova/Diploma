@@ -8,7 +8,7 @@
     </entity>
     <entity name="BSTAim" representedClassName="BSTAim" syncable="YES">
         <attribute name="completed" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="stepsCompleted" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="stepsCount" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
@@ -17,7 +17,7 @@
         <relationship name="timeStatistics" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BSTStatistics" inverseName="aim" inverseEntity="BSTStatistics" syncable="YES"/>
     </entity>
     <entity name="BSTCategory" representedClassName="BSTCategory" syncable="YES">
-        <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <relationship name="aims" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BSTAim" inverseName="category" inverseEntity="BSTAim" syncable="YES"/>
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BSTUser" inverseName="categories" inverseEntity="BSTUser" syncable="YES"/>
@@ -49,7 +49,7 @@
     <entity name="BSTStep" representedClassName="BSTStep" syncable="YES">
         <attribute name="achieved" attributeType="Boolean" syncable="YES"/>
         <attribute name="deadline" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <relationship name="aim" maxCount="1" deletionRule="Nullify" destinationEntity="BSTAim" inverseName="steps" inverseEntity="BSTAim" syncable="YES"/>
         <relationship name="reminder" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="BSTReminder" inverseName="step" inverseEntity="BSTReminder" syncable="YES"/>

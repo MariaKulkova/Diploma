@@ -9,6 +9,9 @@
 #import "BSTCategoryViewModel.h"
 #import "BSTCategory.h"
 #import "Macroses.h"
+#import "BSTParseAPIClient.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "BSTAim.h"
 
 @interface BSTCategoryViewModel ()
 
@@ -21,15 +24,25 @@
 #pragma mark Init
 
 - (void)initialize {
-	self.context = [[NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]] listenChangesFromParentContext];
+	self.context = [NSManagedObjectContext MR_defaultContext];
+//	self.context = [[NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]] listenChangesFromParentContext];
 	self.context.MR_workingName = NSStringFromClass([self class]);
 	
-	self.categories = [BSTCategory MR_findAllSortedBy:Key(BSTCategory, title) ascending:YES inContext:self.context.parentContext];
+	self.categories = [BSTCategory MR_findAllSortedBy:Key(BSTCategory, title) ascending:YES inContext:self.context];
+}
+
+- (void)deleteCategory:(BSTCategory *)category {
+	for (BSTAim *aim in category.aims) {
+		[aim MR_deleteEntity];
+	}
+	[category MR_deleteEntity];
+	[self saveChanges];
+	[self updateData];
 }
 
 #pragma mark Private
 
-- (void)reloadCategories {
+- (void)updateData {
 	self.categories = [BSTCategory MR_findAllSortedBy:Key(BSTCategory, title) ascending:YES inContext:self.context];
 }
 
@@ -42,13 +55,6 @@
 
 - (void)rollbackChanges {
 	[self.context rollback];
-}
-
-- (void)addCategory:(NSDictionary *)categoryInfo {
-	BSTCategory *category = [BSTCategory MR_createInContext:self.context];
-	[category fillWithUserInfo:categoryInfo];
-	[self saveChanges];
-	self.categories = [BSTCategory MR_findAllSortedBy:Key(BSTCategory, title) ascending:YES inContext:self.context.parentContext];
 }
 
 @end

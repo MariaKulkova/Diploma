@@ -7,7 +7,10 @@
 //
 
 #import "BSTBaseViewController.h"
+#import "BSTCategory.h"
 
 @interface BSTAddCategoryViewController : BSTBaseViewController
-@property (strong, nonatomic, readonly) NSString *categoryTitle;
+
+@property (strong, nonatomic) BSTCategory *selectedCategory;
+
 @end

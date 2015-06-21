@@ -15,6 +15,8 @@ static NSString * const kSDFParseAPIKey = @"1CQKgBONmElYOV1AsS2BxONFqN9MzFurl2J4
 
 @interface BSTWebCore ()
 
+@property (nonatomic, strong) NSURLSession *parseSession;
+@property (nonatomic, strong) NSURLSession *authorizedSession;
 @property (nonatomic, strong) NSDictionary *parseAuthHeaders;
 
 @end
@@ -69,17 +71,17 @@ static NSString * const kSDFParseAPIKey = @"1CQKgBONmElYOV1AsS2BxONFqN9MzFurl2J4
 }
 
 /// @return Configuration object if authorization fields was found, otherwise nil
-- (NSURLSessionConfiguration *)fanwireConfiguration {
+- (NSURLSessionConfiguration *)authorizedConfiguration {
 	NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
 	configuration.HTTPAdditionalHeaders = self.authHeaders;
 	return configuration;
 }
 
-+ (NSURLSession *)sharedSession {
-	return [[self sharedInstance] sharedSession];
++ (NSURLSession *)parseSession {
+	return [[self sharedInstance] parseSession];
 }
 
-- (NSURLSession *)sharedSession {
+- (NSURLSession *)parseSession {
 	if (!_parseSession) {
 		NSURLSessionConfiguration *configuration = [self defaultConfiguration];
 		_parseSession = [NSURLSession sessionWithConfiguration:configuration];

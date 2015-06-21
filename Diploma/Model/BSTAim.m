@@ -59,4 +59,14 @@
 	return dictionary;
 }
 
+- (NSInteger)getCompletedStepsCount {
+	NSInteger count = 0;
+	for (BSTStep *step in self.steps) {
+		if (step.achieved) {
+			count++;
+		}
+	}
+	return count;
+}
+
 @end

@@ -8,6 +8,7 @@
 
 #import "BSTViewModel.h"
 #import "MagicalRecord+Additions.h"
+#import "BSTCategory.h"
 
 @interface BSTCategoryViewModel : BSTViewModel
 
@@ -17,6 +18,7 @@
 
 - (void)saveChanges;
 - (void)rollbackChanges;
-- (void)addCategory:(NSDictionary *)categoryinfo;
+- (void)updateData;
+- (void)deleteCategory:(BSTCategory *)category;
 
 @end

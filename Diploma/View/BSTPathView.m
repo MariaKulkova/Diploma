@@ -22,13 +22,20 @@
 	
 	CGContextSetFillColorWithColor(context,[UIColor whiteColor].CGColor);
 	CGContextFillRect(context, rect);
-	
-	self.commonAimsCount = 20;
-	self.achievedAimsCount = 10;
 
 	NSArray *interpolatedPoints = [self computePathPoints:rect];
 	NSArray *stations = [self computePathStations:interpolatedPoints];
-	NSInteger currentStepIndex = [interpolatedPoints indexOfObjectIdenticalTo:stations[self.achievedAimsCount + 1]];
+	NSInteger currentStepIndex;
+	
+	if (self.achievedAimsCount == 0) {
+		currentStepIndex = 0;
+	}
+	else if (self.achievedAimsCount == self.commonAimsCount) {
+		currentStepIndex = interpolatedPoints.count;
+	}
+	else {
+		currentStepIndex = [interpolatedPoints indexOfObjectIdenticalTo:stations[self.achievedAimsCount - 1]];
+	}
 	NSRange range;
 	
 	range.location = 0;
@@ -46,7 +53,7 @@
 	CGContextSetLineWidth(context, 1.0);
 	[self drawPath:futurePath withColor:NeutralColor withThickness:2.0 inRect:rect];
 
-	for (NSInteger i = 0; i <= self.achievedAimsCount + 1; i++) {
+	for (NSInteger i = 0; i < self.achievedAimsCount; i++) {
 		CGPoint point = [[stations objectAtIndex:i] CGPointValue];
 		CGContextSetFillColorWithColor(context, BaseRedColor.CGColor);
 		CGRect rectangle = CGRectMake(point.y - 3, rect.size.height - point.x - 3, 6, 6);
@@ -54,7 +61,7 @@
 		CGContextFillPath(context);
 	}
 	
-	for (NSInteger i = self.achievedAimsCount + 2; i < stations.count; i++) {
+	for (NSInteger i = self.achievedAimsCount; i < stations.count; i++) {
 		CGPoint point = [[stations objectAtIndex:i] CGPointValue];
 		CGContextSetFillColorWithColor(context,NeutralColor.CGColor);
 		CGRect rectangle = CGRectMake(point.y - 3, rect.size.height - point.x - 3, 6, 6);
@@ -99,11 +106,13 @@
 }
 
 - (NSArray *)computePathStations:(NSArray *) pathPoints  {
-	CGFloat offset = floor(pathPoints.count / (self.commonAimsCount + 1));
 	NSMutableArray *stations = [[NSMutableArray alloc] init];
 	
-	for (int i = 1; i < pathPoints.count; i += offset) {
-		[stations addObject:pathPoints[i]];
+	if (self.commonAimsCount != 0) {
+		CGFloat offset = floor(pathPoints.count / self.commonAimsCount - 1);
+		for (int i = offset; i < pathPoints.count; i += offset) {
+			[stations addObject:pathPoints[i]];
+		}
 	}
 	
 	return stations;
