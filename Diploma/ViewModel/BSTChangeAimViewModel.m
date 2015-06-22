@@ -19,7 +19,6 @@
 @implementation BSTChangeAimViewModel
 
 - (void)initialize {
-//	self.context = [[NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]] listenChangesFromParentContext];
 	self.context = [NSManagedObjectContext MR_defaultContext];
 	self.context.MR_workingName = NSStringFromClass([self class]);
 	self.categories = [BSTCategory MR_findAllSortedBy:Key(BSTCategory, title) ascending:YES inContext:self.context];

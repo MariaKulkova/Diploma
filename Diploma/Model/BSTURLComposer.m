@@ -30,6 +30,8 @@
 	}
 	va_end(argumentList);
 	
+	NSLog(@"%@", url);
+	
 	return url;
 }
 

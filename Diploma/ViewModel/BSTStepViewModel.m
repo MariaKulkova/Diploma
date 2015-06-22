@@ -9,6 +9,7 @@
 #import "BSTStepViewModel.h"
 #import "Macroses.h"
 #import "BSTStep.h"
+#import "BSTAchievementCore.h"
 
 @interface BSTStepViewModel ()
 
@@ -53,6 +54,7 @@
 - (void)completeStep:(BSTStep *)step {
 	step.achieved = YES;
 	[self saveChanges];
+	[[BSTAchievementCore sharedInstance] stepCompleted];
 }
 
 @end

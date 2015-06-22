@@ -24,7 +24,6 @@
     </entity>
     <entity name="BSTPeriod" representedClassName="BSTPeriod" syncable="YES">
         <attribute name="periodValue" optional="YES" attributeType="Integer 64" minValueString="1" defaultValueString="1" syncable="YES"/>
-        <relationship name="reminder" maxCount="1" deletionRule="Nullify" destinationEntity="BSTReminder" inverseName="period" inverseEntity="BSTReminder" syncable="YES"/>
         <relationship name="type" maxCount="1" deletionRule="No Action" destinationEntity="BSTPeriodType" inverseName="periods" inverseEntity="BSTPeriodType" syncable="YES"/>
     </entity>
     <entity name="BSTPeriodType" representedClassName="BSTPeriodType" syncable="YES">
@@ -34,7 +33,8 @@
     <entity name="BSTReminder" representedClassName="BSTReminder" syncable="YES">
         <attribute name="activated" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="date" attributeType="Date" syncable="YES"/>
-        <relationship name="period" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="BSTPeriod" inverseName="reminder" inverseEntity="BSTPeriod" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="period" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="step" maxCount="1" deletionRule="Nullify" destinationEntity="BSTStep" inverseName="reminder" inverseEntity="BSTStep" syncable="YES"/>
     </entity>
     <entity name="BSTRewarding" representedClassName="BSTRewarding" syncable="YES">
@@ -64,9 +64,9 @@
         <element name="BSTAchievemnt" positionX="-1379" positionY="-4810" width="128" height="103"/>
         <element name="BSTAim" positionX="-1215" positionY="-5140" width="128" height="163"/>
         <element name="BSTCategory" positionX="-1386" positionY="-5139" width="128" height="103"/>
-        <element name="BSTPeriod" positionX="-1073" positionY="-4806" width="128" height="88"/>
+        <element name="BSTPeriod" positionX="-1073" positionY="-4806" width="128" height="73"/>
         <element name="BSTPeriodType" positionX="-1062" positionY="-4653" width="128" height="73"/>
-        <element name="BSTReminder" positionX="-1071" positionY="-4927" width="128" height="103"/>
+        <element name="BSTReminder" positionX="-1071" positionY="-4933" width="128" height="118"/>
         <element name="BSTRewarding" positionX="-1406" positionY="-4930" width="128" height="73"/>
         <element name="BSTStatistics" positionX="-1226" positionY="-4923" width="128" height="88"/>
         <element name="BSTStep" positionX="-1053" positionY="-5137" width="128" height="133"/>

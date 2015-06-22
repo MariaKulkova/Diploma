@@ -49,16 +49,17 @@ static NSString * const kSDFParseAPIKey = @"1CQKgBONmElYOV1AsS2BxONFqN9MzFurl2J4
 
 - (NSDictionary *)defaultHeaders {
 	NSMutableDictionary *headersDictionary = [[NSMutableDictionary alloc] init];
-	[headersDictionary setValue:@"application/json" forKey:@"Content-Type"];
-	[headersDictionary setValue:kSDFParseAPIApplicationId forKey:@"X-Parse-Application-Id"];
-	[headersDictionary setValue:kSDFParseAPIKey forKey:@"X-Parse-REST-API-Key"];
+//	[headersDictionary setValue:@"application/json" forKey:@"Content-Type"];
+	[headersDictionary setValue:@"1" forKey:@"X-Parse-Revocable-Session"];
+	[headersDictionary setValue:@"zaJZnPE05UW9i7Hjrle338S0geAG30m4Cj3thWhU" forKey:@"X-Parse-Application-Id"];
+	[headersDictionary setValue:@"1CQKgBONmElYOV1AsS2BxONFqN9MzFurl2J4CbyD" forKey:@"X-Parse-REST-API-Key"];
 	self.parseAuthHeaders = [NSDictionary dictionaryWithDictionary:headersDictionary];
 	return headersDictionary;
 }
 
 - (NSDictionary *)authHeaders {
 	NSMutableDictionary *headersDictionary = [[self defaultHeaders] mutableCopy];
-	//[headersDictionary setValue:<#(id)#> forKey:@"X-Parse-Session-Token"];
+//	[headersDictionary setValue:<#(id)#> forKey:@"X-Parse-Session-Token"];
 	return headersDictionary;
 }
 

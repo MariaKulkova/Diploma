@@ -33,21 +33,6 @@
 	self.title     = info[@"title"];
 	self.completed = [info[@"achieved"] boolValue];
 	self.category  = [BSTCategory findFirstOrCreateByAttribute:Key(BSTCategory, id) withValue:info[@"categoryId"] inContext:self.managedObjectContext];
-	
-//	NSMutableSet *deprecated = [self.steps mutableCopy];
-//	for (NSDictionary *stepInfo in info[@"steps"]) {
-//		// Found existing or create empty
-//		BSTStep *step = [BSTStep findFirstOrCreateByAttribute:Key(BSTStep, id) withValue:stepInfo[@"steps_id"] inContext:self.managedObjectContext];
-//		[step fillWithUserInfo:stepInfo];
-//		
-//		[self addStepsObject:step];
-//		[deprecated removeObject:step];
-//	}
-//	[self deprecateEntities:deprecated];
-	
-//	self.stepsCount = self.steps.count;
-//	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"achieved == YES"];
-//	self.stepsCompleted = [self.steps filteredSetUsingPredicate:predicate].count;
 }
 
 - (NSDictionary *)representInfo {

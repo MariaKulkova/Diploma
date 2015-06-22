@@ -12,4 +12,6 @@
 
 + (RACSignal *)addObject:(BSTManagedObject *) object;
 
++ (RACSignal *)loginUser:(NSString *)value password:(NSString *)password;
+
 @end

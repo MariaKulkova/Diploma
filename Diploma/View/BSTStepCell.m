@@ -7,6 +7,7 @@
 //
 
 #import "BSTStepCell.h"
+#import "BSTReminder.h"
 
 @interface BSTStepCell () <UIGestureRecognizerDelegate>
 
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel            *stepTitle;
 @property (weak, nonatomic) IBOutlet UILabel            *deadlineLabel;
 @property (weak, nonatomic) IBOutlet UIView             *completeLine;
+@property (weak, nonatomic) IBOutlet UIImageView        *notifiationImage;
 
 /** Custom properties **/
 @property (nonatomic, strong) UIPanGestureRecognizer *panRecognizer;
@@ -62,6 +64,31 @@
 	_dbEntity = step;
 	self.stepTitle.text = step.title;
 	self.completed = step.achieved;
+
+	if (step.deadline) {
+		NSDate *startDate = [[NSDate alloc] init];
+		NSDate *endDate = step.deadline;
+		
+		NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+		NSDateComponents *components = [gregorianCalendar components:NSCalendarUnitDay
+															fromDate:startDate
+															  toDate:endDate
+															 options:NSCalendarWrapComponents];
+		self.deadlineLabel.text = [NSString stringWithFormat:@"%ld days", (long)[components day]];
+	}
+	
+	if (step.reminder) {
+		self.notifiationImage.hidden = NO;
+		if (step.reminder.activated) {
+			self.notifiationImage.image = [UIImage imageNamed:@"NotificationActive"];
+		}
+		else {
+			self.notifiationImage.image = [UIImage imageNamed:@"NotificationInactive"];
+		}
+	}
+	else {
+		self.notifiationImage.hidden = YES;
+	}
 }
 
 #pragma mark - GestureRecognizerDelegate

@@ -7,7 +7,10 @@
 //
 
 #import "BSTBaseViewController.h"
+#import "BSTReminder.h"
 
 @interface BSTNotificationViewController : BSTBaseViewController
+
+@property (strong, nonatomic) BSTStep *selectedStep;
 
 @end

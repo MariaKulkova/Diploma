@@ -23,6 +23,10 @@
 		4CBEE67D1B187FB80035DC26 /* BSTWebCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBEE67C1B187FB80035DC26 /* BSTWebCore.m */; };
 		4CBF670F1B2EB9640096869D /* BSTStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF670E1B2EB9640096869D /* BSTStepCell.m */; };
 		4CC142891B370BC400BA08C0 /* BSTChangeStepViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC142881B370BC400BA08C0 /* BSTChangeStepViewModel.m */; };
+		4CC4C1021B38CB5200738003 /* BSTAchievementCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4C1011B38CB5200738003 /* BSTAchievementCore.m */; };
+		4CC8A0311B38359800DC84C7 /* BSTNotificationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A0301B38359800DC84C7 /* BSTNotificationViewModel.m */; };
+		4CC8A0341B384E4400DC84C7 /* BSTAchieveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A0331B384E4400DC84C7 /* BSTAchieveViewController.m */; };
+		4CC8A03A1B38903500DC84C7 /* BSTReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A0391B38903500DC84C7 /* BSTReminder.m */; };
 		4CC9E24B1B2565E000E72074 /* BSTAim.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9E24A1B2565E000E72074 /* BSTAim.m */; };
 		4CCA0DF61B2826E000E139F1 /* BSTStepViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0DF51B2826E000E139F1 /* BSTStepViewModel.m */; };
 		4CCA0DF91B2826F200E139F1 /* BSTUserProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA0DF81B2826F200E139F1 /* BSTUserProfileViewModel.m */; };
@@ -38,14 +42,11 @@
 		4CCB6FB91B358640000BFE48 /* BSTChangeCategoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB6FB81B358640000BFE48 /* BSTChangeCategoryViewModel.m */; };
 		4CCB6FBC1B35C13C000BFE48 /* BSTProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB6FBB1B35C13C000BFE48 /* BSTProgressViewController.m */; };
 		4CCC078B1B28CD6200B8D8F9 /* BSTNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCC078A1B28CD6200B8D8F9 /* BSTNotificationViewController.m */; };
-		4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */; };
 		4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A521B11E33F001E7D45 /* BSTUser.m */; };
 		4CCE2A561B11E33F001E7D45 /* BSTStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A551B11E33F001E7D45 /* BSTStep.m */; };
-		4CCE2A5C1B11E33F001E7D45 /* BSTPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A5B1B11E33F001E7D45 /* BSTPeriod.m */; };
 		4CCE2A5F1B11E33F001E7D45 /* BSTStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A5E1B11E33F001E7D45 /* BSTStatistics.m */; };
 		4CCE2A621B11E33F001E7D45 /* BSTAchievemnt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A611B11E33F001E7D45 /* BSTAchievemnt.m */; };
 		4CCE2A651B11E340001E7D45 /* BSTRewarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A641B11E340001E7D45 /* BSTRewarding.m */; };
-		4CCE2A681B11E340001E7D45 /* BSTReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A671B11E340001E7D45 /* BSTReminder.m */; };
 		4CCE2A6F1B11E739001E7D45 /* MagicalRecord+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A6E1B11E739001E7D45 /* MagicalRecord+Additions.m */; };
 		4CCE2A781B1202CD001E7D45 /* BSTRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE2A771B1202CD001E7D45 /* BSTRootTabBarController.m */; };
 		4CD5CC5C1B33F7100009427E /* BSTChangeAimViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5CC5B1B33F7100009427E /* BSTChangeAimViewModel.m */; };
@@ -117,6 +118,14 @@
 		4CBF670E1B2EB9640096869D /* BSTStepCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTStepCell.m; sourceTree = "<group>"; };
 		4CC142871B370BC400BA08C0 /* BSTChangeStepViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTChangeStepViewModel.h; sourceTree = "<group>"; };
 		4CC142881B370BC400BA08C0 /* BSTChangeStepViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTChangeStepViewModel.m; sourceTree = "<group>"; };
+		4CC4C1001B38CB5200738003 /* BSTAchievementCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAchievementCore.h; sourceTree = "<group>"; };
+		4CC4C1011B38CB5200738003 /* BSTAchievementCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAchievementCore.m; sourceTree = "<group>"; };
+		4CC8A02F1B38359800DC84C7 /* BSTNotificationViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTNotificationViewModel.h; sourceTree = "<group>"; };
+		4CC8A0301B38359800DC84C7 /* BSTNotificationViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTNotificationViewModel.m; sourceTree = "<group>"; };
+		4CC8A0321B384E4400DC84C7 /* BSTAchieveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAchieveViewController.h; sourceTree = "<group>"; };
+		4CC8A0331B384E4400DC84C7 /* BSTAchieveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAchieveViewController.m; sourceTree = "<group>"; };
+		4CC8A0381B38903500DC84C7 /* BSTReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTReminder.h; sourceTree = "<group>"; };
+		4CC8A0391B38903500DC84C7 /* BSTReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTReminder.m; sourceTree = "<group>"; };
 		4CC9E2491B2565E000E72074 /* BSTAim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAim.h; sourceTree = "<group>"; };
 		4CC9E24A1B2565E000E72074 /* BSTAim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAim.m; sourceTree = "<group>"; };
 		4CCA0DF41B2826E000E139F1 /* BSTStepViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStepViewModel.h; sourceTree = "<group>"; };
@@ -147,22 +156,16 @@
 		4CCB6FBB1B35C13C000BFE48 /* BSTProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTProgressViewController.m; sourceTree = "<group>"; };
 		4CCC07891B28CD6200B8D8F9 /* BSTNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTNotificationViewController.h; sourceTree = "<group>"; };
 		4CCC078A1B28CD6200B8D8F9 /* BSTNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTNotificationViewController.m; sourceTree = "<group>"; };
-		4CCE2A4E1B11E33E001E7D45 /* BSTPeriodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTPeriodType.h; sourceTree = "<group>"; };
-		4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTPeriodType.m; sourceTree = "<group>"; };
 		4CCE2A511B11E33F001E7D45 /* BSTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTUser.h; sourceTree = "<group>"; };
 		4CCE2A521B11E33F001E7D45 /* BSTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTUser.m; sourceTree = "<group>"; };
 		4CCE2A541B11E33F001E7D45 /* BSTStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStep.h; sourceTree = "<group>"; };
 		4CCE2A551B11E33F001E7D45 /* BSTStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTStep.m; sourceTree = "<group>"; };
-		4CCE2A5A1B11E33F001E7D45 /* BSTPeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTPeriod.h; sourceTree = "<group>"; };
-		4CCE2A5B1B11E33F001E7D45 /* BSTPeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTPeriod.m; sourceTree = "<group>"; };
 		4CCE2A5D1B11E33F001E7D45 /* BSTStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTStatistics.h; sourceTree = "<group>"; };
 		4CCE2A5E1B11E33F001E7D45 /* BSTStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTStatistics.m; sourceTree = "<group>"; };
 		4CCE2A601B11E33F001E7D45 /* BSTAchievemnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTAchievemnt.h; sourceTree = "<group>"; };
 		4CCE2A611B11E33F001E7D45 /* BSTAchievemnt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTAchievemnt.m; sourceTree = "<group>"; };
 		4CCE2A631B11E340001E7D45 /* BSTRewarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTRewarding.h; sourceTree = "<group>"; };
 		4CCE2A641B11E340001E7D45 /* BSTRewarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTRewarding.m; sourceTree = "<group>"; };
-		4CCE2A661B11E340001E7D45 /* BSTReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTReminder.h; sourceTree = "<group>"; };
-		4CCE2A671B11E340001E7D45 /* BSTReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTReminder.m; sourceTree = "<group>"; };
 		4CCE2A6D1B11E739001E7D45 /* MagicalRecord+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MagicalRecord+Additions.h"; sourceTree = "<group>"; };
 		4CCE2A6E1B11E739001E7D45 /* MagicalRecord+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MagicalRecord+Additions.m"; sourceTree = "<group>"; };
 		4CCE2A721B11E99E001E7D45 /* nsuserdefaults-helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nsuserdefaults-helper.h"; sourceTree = "<group>"; };
@@ -306,26 +309,22 @@
 			children = (
 				4CA8BA401B20D7770036E7BB /* BSTManagedObject.h */,
 				4CA8BA411B20D7770036E7BB /* BSTManagedObject.m */,
-				4CCE2A661B11E340001E7D45 /* BSTReminder.h */,
-				4CCE2A671B11E340001E7D45 /* BSTReminder.m */,
 				4CCE2A631B11E340001E7D45 /* BSTRewarding.h */,
 				4CCE2A641B11E340001E7D45 /* BSTRewarding.m */,
 				4CCE2A601B11E33F001E7D45 /* BSTAchievemnt.h */,
 				4CCE2A611B11E33F001E7D45 /* BSTAchievemnt.m */,
 				4CCE2A5D1B11E33F001E7D45 /* BSTStatistics.h */,
 				4CCE2A5E1B11E33F001E7D45 /* BSTStatistics.m */,
-				4CCE2A5A1B11E33F001E7D45 /* BSTPeriod.h */,
-				4CCE2A5B1B11E33F001E7D45 /* BSTPeriod.m */,
 				4C8AA2D11B25D18B00ADCB83 /* BSTCategory.h */,
 				4C8AA2D21B25D18B00ADCB83 /* BSTCategory.m */,
+				4CC8A0381B38903500DC84C7 /* BSTReminder.h */,
+				4CC8A0391B38903500DC84C7 /* BSTReminder.m */,
 				4CC9E2491B2565E000E72074 /* BSTAim.h */,
 				4CC9E24A1B2565E000E72074 /* BSTAim.m */,
 				4CCE2A541B11E33F001E7D45 /* BSTStep.h */,
 				4CCE2A551B11E33F001E7D45 /* BSTStep.m */,
 				4CCE2A511B11E33F001E7D45 /* BSTUser.h */,
 				4CCE2A521B11E33F001E7D45 /* BSTUser.m */,
-				4CCE2A4E1B11E33E001E7D45 /* BSTPeriodType.h */,
-				4CCE2A4F1B11E33E001E7D45 /* BSTPeriodType.m */,
 				4CD8B8391B09EC1700C31508 /* BSTDatabase.xcdatamodeld */,
 			);
 			name = DataBase;
@@ -419,6 +418,8 @@
 				4C19BE801B3037D9001B786C /* Constants.h */,
 				4CDE72011B1606B900823DA8 /* BSTSpline.h */,
 				4CDE72021B1606B900823DA8 /* BSTSpline.m */,
+				4CC4C1001B38CB5200738003 /* BSTAchievementCore.h */,
+				4CC4C1011B38CB5200738003 /* BSTAchievementCore.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -455,6 +456,8 @@
 				4CCA0E011B28286900E139F1 /* BSTUserProfileViewController.m */,
 				4CCC07891B28CD6200B8D8F9 /* BSTNotificationViewController.h */,
 				4CCC078A1B28CD6200B8D8F9 /* BSTNotificationViewController.m */,
+				4CC8A0321B384E4400DC84C7 /* BSTAchieveViewController.h */,
+				4CC8A0331B384E4400DC84C7 /* BSTAchieveViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,6 +482,8 @@
 				4CC142881B370BC400BA08C0 /* BSTChangeStepViewModel.m */,
 				4CCA0DF71B2826F200E139F1 /* BSTUserProfileViewModel.h */,
 				4CCA0DF81B2826F200E139F1 /* BSTUserProfileViewModel.m */,
+				4CC8A02F1B38359800DC84C7 /* BSTNotificationViewModel.h */,
+				4CC8A0301B38359800DC84C7 /* BSTNotificationViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -662,21 +667,22 @@
 				4CDE71F11B15ACFD00823DA8 /* BSTViewModel.m in Sources */,
 				4CD5CC5C1B33F7100009427E /* BSTChangeAimViewModel.m in Sources */,
 				4CC9E24B1B2565E000E72074 /* BSTAim.m in Sources */,
-				4CCE2A501B11E33E001E7D45 /* BSTPeriodType.m in Sources */,
 				4C9BCF0A1B2076F2009BCFB7 /* BSTSyncEngine.m in Sources */,
 				4CDE71F41B15AD5800823DA8 /* BSTAimViewModel.m in Sources */,
+				4CC8A0341B384E4400DC84C7 /* BSTAchieveViewController.m in Sources */,
 				4CCE2A621B11E33F001E7D45 /* BSTAchievemnt.m in Sources */,
 				4CCA0E091B2828DF00E139F1 /* BSTRegistrationViewController.m in Sources */,
 				4CCE2A561B11E33F001E7D45 /* BSTStep.m in Sources */,
 				4CD8AEFD1B13123F0052BE82 /* BSTAimsViewController.m in Sources */,
+				4CC8A0311B38359800DC84C7 /* BSTNotificationViewModel.m in Sources */,
 				4CCA0DF91B2826F200E139F1 /* BSTUserProfileViewModel.m in Sources */,
 				4CD8B8381B09EC1700C31508 /* AppDelegate.m in Sources */,
+				4CC8A03A1B38903500DC84C7 /* BSTReminder.m in Sources */,
 				4C8AA2D61B25DDDE00ADCB83 /* BSTAimDescriptionViewController.m in Sources */,
 				4CD8AEF91B130B6D0052BE82 /* BSTBaseViewController.m in Sources */,
 				4CA8BA451B20DBDA0036E7BB /* NSURLSession+RACSupport.m in Sources */,
 				4C8AA2CA1B258C2C00ADCB83 /* BSTAddCategoryViewController.m in Sources */,
 				4C9BCF071B2046EC009BCFB7 /* BSTURLComposer.m in Sources */,
-				4CCE2A5C1B11E33F001E7D45 /* BSTPeriod.m in Sources */,
 				4CDE72001B15FDCA00823DA8 /* BSTProgressPie.m in Sources */,
 				4CCE2A651B11E340001E7D45 /* BSTRewarding.m in Sources */,
 				4C8AA2CD1B25BBB000ADCB83 /* BSTCategoryViewModel.m in Sources */,
@@ -684,7 +690,6 @@
 				4C8AB0B61B175A4300680633 /* BSTParseAPIClient.m in Sources */,
 				4C89D42E1B3012C400219FB1 /* BSTRootViewController.m in Sources */,
 				4CCB6FBC1B35C13C000BFE48 /* BSTProgressViewController.m in Sources */,
-				4CCE2A681B11E340001E7D45 /* BSTReminder.m in Sources */,
 				4CCA0DFC1B28282400E139F1 /* BSTStepViewController.m in Sources */,
 				4CDE71FA1B15B4B300823DA8 /* BSTCategoryNameCell.m in Sources */,
 				4CCE2A6F1B11E739001E7D45 /* MagicalRecord+Additions.m in Sources */,
@@ -703,6 +708,7 @@
 				4CCE2A531B11E33F001E7D45 /* BSTUser.m in Sources */,
 				4CD8B8641B0A1C9E00C31508 /* BSTPathView.m in Sources */,
 				4CCA0DF61B2826E000E139F1 /* BSTStepViewModel.m in Sources */,
+				4CC4C1021B38CB5200738003 /* BSTAchievementCore.m in Sources */,
 				4CBF670F1B2EB9640096869D /* BSTStepCell.m in Sources */,
 				4CDE72031B1606B900823DA8 /* BSTSpline.m in Sources */,
 			);

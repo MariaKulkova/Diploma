@@ -25,17 +25,6 @@
 	if (info[@"owner"]) {
 		self.owner = [BSTUser MR_findFirstByAttribute:Key(BSTUser, id) withValue:info[@"owner"] inContext:self.managedObjectContext];
 	}
-	
-//	NSMutableSet *deprecated = [self.aims mutableCopy];
-//	for (NSDictionary *aimInfo in info[@"aims_id"]) {
-//		// Found existing or create empty
-//		BSTAim *aim = [BSTAim findFirstOrCreateByAttribute:Key(BSTAim, objectID) withValue:aimInfo[@"aims_id"] inContext:self.managedObjectContext];
-//		[aim fillWithUserInfo:aimInfo];
-//		
-//		[self addAimsObject:aim];
-//		[deprecated removeObject:aim];
-//	}
-//	[self deprecateEntities:deprecated];
 }
 
 - (NSDictionary *)representInfo {

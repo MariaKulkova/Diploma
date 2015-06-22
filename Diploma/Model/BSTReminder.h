@@ -2,22 +2,21 @@
 //  BSTReminder.h
 //  Diploma
 //
-//  Created by Maria on 24.05.15.
+//  Created by Maria on 22.06.15.
 //  Copyright (c) 2015 Maria. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "BSTManagedObject.h"
 
-@class BSTPeriod, BSTStep;
+@class BSTStep;
 
-@interface BSTReminder : BSTManagedObject
+@interface BSTReminder : NSManagedObject
 
-@property (nonatomic, retain) NSDate    *date;
-@property (nonatomic)         BOOL      activated;
-
-@property (nonatomic, retain) BSTStep   *step;
-@property (nonatomic, retain) BSTPeriod *period;
+@property (nonatomic, retain) NSString *id;
+@property (nonatomic, assign) BOOL      activated;
+@property (nonatomic, retain) NSDate   *date;
+@property (nonatomic, assign) int64_t   period;
+@property (nonatomic, retain) BSTStep  *step;
 
 @end

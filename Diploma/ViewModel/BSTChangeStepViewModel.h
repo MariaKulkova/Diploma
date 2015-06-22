@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString *objectId;
 @property (nonatomic, strong) BSTAim   *selectedAim;
 @property (nonatomic, strong) NSString *stepTitle;
+@property (nonatomic, strong) NSDate   *date;
 
 /// Comands for Save and Cancel
 @property (nonatomic, strong) RACCommand *executeStepChanging;

@@ -25,7 +25,6 @@
 
 - (void)initialize {
 	self.context = [NSManagedObjectContext MR_defaultContext];
-//	self.context = [[NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]] listenChangesFromParentContext];
 	self.context.MR_workingName = NSStringFromClass([self class]);
 	
 	[self updateData];

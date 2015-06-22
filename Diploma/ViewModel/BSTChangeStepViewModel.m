@@ -64,6 +64,7 @@
 		}
 		currentStep.title = self.stepTitle;
 		currentStep.achieved = NO;
+		currentStep.deadline = self.date;
 		
 		[subscriber sendCompleted];
 		return [RACDisposable disposableWithBlock:^{

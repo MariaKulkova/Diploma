@@ -7,7 +7,14 @@
 //
 
 #import "BSTViewModel.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface BSTLoginViewModel : BSTViewModel
+
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *password;
+
+@property (nonatomic, strong) RACCommand *executeLogin;
+@property (nonatomic, assign) BOOL executionStatus;
 
 @end
