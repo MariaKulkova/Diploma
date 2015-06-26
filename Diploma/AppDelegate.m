@@ -11,6 +11,7 @@
 #import "nsuserdefaults-macros.h"
 #import "BSTAim.h"
 #import "BSTCategory.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -22,6 +23,10 @@
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		[MagicalRecord setupCoreDataStackWithStoreNamed:@"BSTDatabase"];
+		
+		[Parse enableLocalDatastore];
+		[Parse setApplicationId:@"zaJZnPE05UW9i7Hjrle338S0geAG30m4Cj3thWhU"
+					  clientKey:@"sbjY3HrG8Zl4sXApik9ewPwUsSOqafi7REgbewvb"];
 	});
 }
 

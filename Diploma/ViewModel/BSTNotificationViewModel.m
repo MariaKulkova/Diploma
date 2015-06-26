@@ -46,10 +46,6 @@
 	}
 }
 
-- (void)rollbackChanges {
-	[self.context rollback];
-}
-
 - (RACSignal *)changeNotification {
 	return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 		BSTReminder *currentReminder;

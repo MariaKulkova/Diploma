@@ -19,10 +19,8 @@
 
 @interface BSTAimsViewController () <UITableViewDelegate, UITableViewDataSource, AKPickerViewDelegate, AKPickerViewDataSource, UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *categoriesPanel;
-@property (weak, nonatomic) IBOutlet UITableView      *tableView;
-
-@property (nonatomic, assign) BOOL infiniteScrollActive;
+@property (weak, nonatomic) IBOutlet UIView      *categoriesPanel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) BSTAimViewModel *viewModel;
 @property (nonatomic, strong) AKPickerView    *pickerView;
@@ -37,7 +35,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[super addAppTitle];
-	self.infiniteScrollActive = YES;
 	
 	self.pickerView = [[AKPickerView alloc] initWithFrame:CGRectMake(0, 0, self.categoriesPanel.frame.size.width, self.categoriesPanel.frame.size.height)];
 	self.pickerView.delegate = self;

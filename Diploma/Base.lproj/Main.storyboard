@@ -1367,9 +1367,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="55u-Pf-MlS" kind="modal" id="GoV-uF-nX3"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNg-oC-cmy">
                                         <rect key="frame" x="35" y="303" width="210" height="40"/>
@@ -1425,6 +1422,7 @@
                         <outlet property="loginButton" destination="tY1-z4-gqD" id="D5H-8p-CtE"/>
                         <outlet property="loginTextField" destination="m4P-HU-0dc" id="Nxd-qz-2Qe"/>
                         <outlet property="passwordTextField" destination="SUn-xO-3dD" id="g5D-de-fSb"/>
+                        <segue destination="55u-Pf-MlS" kind="modal" identifier="RootTabSegue" id="qxu-b2-dzT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BO-tw-Rnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1524,7 +1522,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="55u-Pf-MlS" kind="modal" id="p3i-k0-fJ0"/>
+                                            <action selector="signupButtonTouch:" destination="b0o-Mu-2RW" eventType="touchUpInside" id="k82-gR-F1j"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1561,6 +1559,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AfV-IO-XZb"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="LvL-Sa-ddm" id="fi9-UU-ceF"/>
+                        <outlet property="loginTextField" destination="eyM-RI-69V" id="JK5-Hh-EH0"/>
+                        <outlet property="passwordTextField" destination="RL8-SX-ZZ0" id="1Kk-27-xzW"/>
+                        <outlet property="signUpButton" destination="WgX-Es-LN2" id="86x-D6-b3J"/>
+                        <segue destination="55u-Pf-MlS" kind="modal" identifier="RootTabSegue" id="gJn-QG-S69"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Kr-JP-MJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1679,7 +1684,7 @@ instructionsfor password recovering</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="qxu-b2-dzT"/>
         <segue reference="Ner-na-p6d"/>
-        <segue reference="p3i-k0-fJ0"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,8 +13,6 @@
 
 @interface BSTChangeAimViewModel : BSTViewModel
 
-@property (nonatomic, strong) NSManagedObjectContext *context;
-
 @property (nonatomic, strong, readonly) NSArray *categories;
 
 /// Aim properties
@@ -24,8 +22,5 @@
 
 /// Comands for Save and Cancel
 @property (nonatomic, strong) RACCommand *executeAimChanging;
-
-- (void)saveChanges;
-- (void)rollbackChanges;
 
 @end

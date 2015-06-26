@@ -13,7 +13,6 @@
 @implementation BSTChangeStepViewModel
 
 - (void)initialize {
-	//	self.context = [[NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]] listenChangesFromParentContext];
 	self.context = [NSManagedObjectContext MR_defaultContext];
 	self.context.MR_workingName = NSStringFromClass([self class]);
 	
@@ -37,15 +36,6 @@
 		NSLog(@"changeAim: %@", error);
 		[self rollbackChanges];
 	}];
-}
-
-- (void)saveChanges {
-	NSLog(@"Save to persistent storage");
-	[self.context MR_saveToPersistentStoreAndWait];
-}
-
-- (void)rollbackChanges {
-	[self.context rollback];
 }
 
 - (RACSignal *)changeStep {

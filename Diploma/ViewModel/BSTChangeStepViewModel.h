@@ -12,8 +12,6 @@
 
 @interface BSTChangeStepViewModel : BSTViewModel
 
-@property (nonatomic, strong) NSManagedObjectContext *context;
-
 /// Step properties
 @property (nonatomic, strong) NSString *objectId;
 @property (nonatomic, strong) BSTAim   *selectedAim;
@@ -23,6 +21,4 @@
 /// Comands for Save and Cancel
 @property (nonatomic, strong) RACCommand *executeStepChanging;
 
-- (void)saveChanges;
-- (void)rollbackChanges;
 @end

@@ -13,14 +13,9 @@
 
 @interface BSTStepViewModel : BSTViewModel
 
-@property (nonatomic, strong) NSManagedObjectContext *context;
-
 @property (nonatomic, strong, readonly) NSArray *steps;
+@property (nonatomic, strong)           BSTAim  *selectedAim;
 
-@property (nonatomic, strong) BSTAim *selectedAim;
-
-- (void)saveChanges;
-- (void)rollbackChanges;
 - (void)updateData;
 - (void)deleteStep:(BSTStep *)step;
 - (void)completeStep: (BSTStep *)step;

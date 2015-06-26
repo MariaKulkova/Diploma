@@ -41,15 +41,6 @@
 
 #pragma mark - Public
 
-- (void)saveChanges {
-	NSLog(@"Save to persistent storage");
-	[self.context MR_saveToPersistentStoreAndWait];
-}
-
-- (void)rollbackChanges {
-	[self.context rollback];
-}
-
 - (void)updateData {
 	self.aims = [self.selectedCategory.aims sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:Key(BSTAim, title) ascending:YES]]];
 	self.categories = [BSTCategory MR_findAllSortedBy:Key(BSTCategory, title) ascending:YES inContext:self.context];

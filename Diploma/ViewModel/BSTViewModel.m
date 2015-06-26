@@ -26,4 +26,13 @@
 	[NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
+- (void)saveChanges {
+	NSLog(@"Save to persistent storage");
+	[self.context MR_saveToPersistentStoreAndWait];
+}
+
+- (void)rollbackChanges {
+	[self.context rollback];
+}
+
 @end

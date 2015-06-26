@@ -13,8 +13,6 @@
 
 @interface BSTNotificationViewModel : BSTViewModel
 
-@property (nonatomic, strong) NSManagedObjectContext *context;
-
 @property (nonatomic, strong) NSString *objectId;
 @property (nonatomic, strong) BSTStep  *selectedStep;
 @property (nonatomic, assign) BOOL      activated;
@@ -23,8 +21,5 @@
 
 /// Comands for Save and Cancel
 @property (nonatomic, strong) RACCommand *executeNotificationChanging;
-
-- (void)saveChanges;
-- (void)rollbackChanges;
 
 @end

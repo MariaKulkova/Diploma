@@ -48,15 +48,6 @@
 	}];
 }
 
-- (void)saveChanges {
-	NSLog(@"Save to persistent storage");
-	[self.context MR_saveToPersistentStoreAndWait];
-}
-
-- (void)rollbackChanges {
-	[self.context rollback];
-}
-
 - (RACSignal *)changeAim {
 	return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 		BSTAim *currentAim;

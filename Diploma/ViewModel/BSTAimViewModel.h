@@ -14,15 +14,11 @@
 
 @interface BSTAimViewModel : BSTViewModel
 
-@property (nonatomic, strong) NSManagedObjectContext *context;
-
 @property (nonatomic, strong, readonly) NSArray *categories;
 @property (nonatomic, strong, readonly) NSArray *aims;
 
 @property (nonatomic, strong) BSTCategory *selectedCategory;
 
-- (void)saveChanges;
-- (void)rollbackChanges;
 - (void)updateData;
 - (void)deleteAim:(BSTAim *)aim;
 

@@ -9,7 +9,7 @@
 #import "BSTCategoryViewModel.h"
 #import "BSTCategory.h"
 #import "Macroses.h"
-#import "BSTParseAPIClient.h"
+#import "BSTParseClient.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "BSTAim.h"
 
@@ -25,7 +25,6 @@
 
 - (void)initialize {
 	self.context = [NSManagedObjectContext MR_defaultContext];
-//	self.context = [[NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]] listenChangesFromParentContext];
 	self.context.MR_workingName = NSStringFromClass([self class]);
 	
 	self.categories = [BSTCategory MR_findAllSortedBy:Key(BSTCategory, title) ascending:YES inContext:self.context];
@@ -40,21 +39,10 @@
 	[self updateData];
 }
 
-#pragma mark Private
+#pragma mark Public
 
 - (void)updateData {
 	self.categories = [BSTCategory MR_findAllSortedBy:Key(BSTCategory, title) ascending:YES inContext:self.context];
-}
-
-#pragma mark - Public
-
-- (void)saveChanges {
-	NSLog(@"Save to persistent storage");
-	[self.context MR_saveToPersistentStoreAndWait];
-}
-
-- (void)rollbackChanges {
-	[self.context rollback];
 }
 
 @end

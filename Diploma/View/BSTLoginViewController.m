@@ -27,20 +27,6 @@
     [super viewDidLoad];
 	
 	[self bindModel];
-	NSURLSession *session = BSTWebCore.parseSession;
-//	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://api.parse.com/1/login?username=test&password=qwerty"]];
-	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://api.parse.com/1/users"]];
-	request.allHTTPHeaderFields = session.configuration.HTTPAdditionalHeaders;
-	request.HTTPMethod = @"POST";
-	NSDictionary *info = @{@"username":@"maru", @"password":@"123456", @"email":@"maria35794@gmail.com"};
-	NSData *rawData = [NSJSONSerialization dataWithJSONObject:info options:kNilOptions error:nil];
-	request.HTTPBody = rawData;
-	NSURLSessionDataTask *dataTask = [BSTWebCore.parseSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-		NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-		NSLog(@"%@", json);
-	}];
-	
-	[dataTask resume];
 }
 
 - (void)bindModel {
@@ -50,6 +36,17 @@
 	RAC(self.viewModel, password) = self.passwordTextField.rac_textSignal;
 	
 	self.loginButton.rac_command = self.viewModel.executeLogin;
+	
+	@weakify(self);
+	
+	// Observe viewmodel status
+	[[RACObserve(self.viewModel, executionStatus) deliverOnMainThread] subscribeNext:^(NSNumber *status) {
+		@strongify(self);
+		
+		if ([status boolValue]) {
+			[self performSegueWithIdentifier:@"RootTabSegue" sender:self];
+		}
+	}];
 }
 
 @end

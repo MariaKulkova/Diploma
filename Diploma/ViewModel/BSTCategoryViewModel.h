@@ -12,12 +12,8 @@
 
 @interface BSTCategoryViewModel : BSTViewModel
 
-@property (nonatomic, strong) NSManagedObjectContext *context;
-
 @property (nonatomic, strong, readonly) NSArray *categories;
 
-- (void)saveChanges;
-- (void)rollbackChanges;
 - (void)updateData;
 - (void)deleteCategory:(BSTCategory *)category;
 

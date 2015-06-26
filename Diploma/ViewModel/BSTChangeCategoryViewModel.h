@@ -12,16 +12,11 @@
 
 @interface BSTChangeCategoryViewModel : BSTViewModel
 
-@property (nonatomic, strong) NSManagedObjectContext *context;
-
 /// Aim properties
 @property (nonatomic, strong) NSString *objectId;
 @property (nonatomic, strong) NSString *categoryTitle;
 
 /// Comands for Save and Cancel
 @property (nonatomic, strong) RACCommand *executeCategoryChanging;
-
-- (void)saveChanges;
-- (void)rollbackChanges;
 
 @end

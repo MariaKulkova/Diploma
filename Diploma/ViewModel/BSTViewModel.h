@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MagicalRecord+Additions.h"
 
 @interface BSTViewModel : NSObject
 
+@property (strong, nonatomic) NSManagedObjectContext *context;
+
 // Custom initializer for all instances created with `alloc/init` and `new`
 - (void)initialize;
+
+- (void)saveChanges;
+- (void)rollbackChanges;
 
 @end
