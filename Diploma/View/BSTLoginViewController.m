@@ -40,10 +40,10 @@
 	@weakify(self);
 	
 	// Observe viewmodel status
-	[[RACObserve(self.viewModel, executionStatus) deliverOnMainThread] subscribeNext:^(NSNumber *status) {
+	[[RACObserve(self.viewModel, executionStatus) deliverOnMainThread] subscribeNext:^(BSTExecutionStatus *status) {
 		@strongify(self);
 		
-		if ([status boolValue]) {
+		if ([status isCompleted] && status.sender == self.viewModel.executeLogin) {
 			[self performSegueWithIdentifier:@"RootTabSegue" sender:self];
 		}
 	}];

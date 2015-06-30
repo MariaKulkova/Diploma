@@ -16,4 +16,6 @@
 
 + (RACSignal *)logInUser:(NSString *)username password:(NSString *)password;
 
++ (RACSignal *)resetPassword:(NSString *)email;
+
 @end

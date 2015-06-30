@@ -7,7 +7,15 @@
 //
 
 #import "BSTViewModel.h"
+#import "BSTExecutionStatus.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 
 @interface BSTResetPassViewModel : BSTViewModel
+
+@property (strong, nonatomic) NSString *email;
+
+@property (nonatomic, strong) RACCommand *executePassReset;
+@property (nonatomic, strong) BSTExecutionStatus *executionStatus;
 
 @end

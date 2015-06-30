@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa.h>
-#import "NSURLSession+RACSupport.h"
 
 @interface BSTWebCore : NSObject
 
@@ -23,3 +22,4 @@
 + (NSURLSession *)authorizedSession;
 
 @end
+ 

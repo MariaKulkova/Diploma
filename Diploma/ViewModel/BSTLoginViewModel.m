@@ -19,8 +19,28 @@
 
 - (void)initialize {
 	[super initialize];
-	self.executionStatus = NO;
-	[self bindValidation];
+	
+	// Bind user input validation to signal
+	RACSignal *userInputSignal = [self bindValidation];
+	
+	// Bind web services to signal
+	RACSubject *webServiceSignal =
+	self.webServiceSignal        = [self bindWebServices];
+	
+	// Now combine two signals and bind them to viewModel execution status
+	RAC(self, executionStatus) = [RACSignal
+								  combineLatest:@[userInputSignal, webServiceSignal]
+								  reduce:^id(BSTExecutionStatus *inputStatus, BSTExecutionStatus *webStatus) {
+									  // Web status has greater priority, than input
+									  return [webStatus isError] ? webStatus :
+									  		 [inputStatus isCompleted] || [inputStatus isNormal] ? webStatus : inputStatus;
+								  }];
+	
+	[self dropNetworkError];
+}
+
+- (RACSubject *)bindWebServices {
+	RACSubject *webServiceSignal = [RACSubject subject];
 	
 	@weakify(self);
 	RACCommand *command;
@@ -30,24 +50,59 @@
 		@strongify(self);
 		return [self login];
 	}];
-
+	
 	[[command.executionSignals
 	  switchToLatest]
 		subscribeNext:^(NSDictionary *authInfo) {
 			@strongify(self);
 			NSLog(@"%@", authInfo);
-			self.executionStatus = YES;
+			BSTExecutionStatus *status = [[BSTExecutionStatus completed] withSender:self.executeLogin];
+			[webServiceSignal sendNext:status];
 		}];
-
+	
 	[command.errors subscribeNext:^(NSError *error) {
 		@strongify(self);
 		NSLog(@"login: %@", error);
-		self.executionStatus = NO;
+		NSString *description = error.localizedDescription;
+		BSTExecutionStatus *status = [[BSTExecutionStatus error:description] withSender:self.executeLogin];
+		[webServiceSignal sendNext:status];
 	}];
+	
+	return webServiceSignal;
 }
 
-- (void)bindValidation {
+- (RACSignal *)bindValidation {
+	RACSignal *validUsernameSignal = [RACObserve(self, username) map:^id(NSString *username) {
+		BSTExecutionStatus *status = [BSTExecutionStatus normal];
+		
+		if (username.length == 0) {
+			status = [BSTExecutionStatus hint:@"Enter username"];
+		}
+		
+		return status;
+	}];
 	
+	RACSignal *validPasswordSignal = [RACObserve(self, password) map:^id(NSString *password) {
+		BSTExecutionStatus *status = [BSTExecutionStatus normal];
+		
+		if (password.length == 0) {
+			status = [BSTExecutionStatus hint:@"Enter password"];
+		}
+		
+		return status;
+	}];
+	
+	// Combine two signals to one
+	return [RACSignal
+			combineLatest:@[validUsernameSignal, validPasswordSignal]
+			reduce:^id(BSTExecutionStatus *usernameStatus, BSTExecutionStatus *passwordStatus) {
+				return ![usernameStatus isNormal] ? usernameStatus :
+				       ![passwordStatus isNormal] ? passwordStatus : [BSTExecutionStatus new];
+			}];
+}
+
+- (void)dropNetworkError {
+	[self.webServiceSignal sendNext:[BSTExecutionStatus normal]];
 }
 
 - (RACSignal *)login {
